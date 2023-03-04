@@ -1,0 +1,68 @@
+/*================
+ Template Name: Hostim - Hosting Services HTML Template
+ Template URL: https://hostim.themetags.com/
+ Description:
+ Version: 1.0
+ Author: https://themeforest.net/user/themetags
+=======================*/
+
+
+//Configuration
+@import 'abstract/variable';
+@import 'abstract/mixin';
+
+//Vendors.
+@import "vendors/main";
+
+//Base Stuff
+@import 'base/spacing';
+@import 'base/typography';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/breadcrumb';
+
+//Component
+@import 'component/button';
+@import 'component/notice-bar.scss';
+
+//Themes 
+@import 'theme/common';
+@import 'theme/theme-default';
+@import 'theme/animations';
+@import 'theme/preloader';
+
+// Pages
+@import 'pages/home-1';
+@import 'pages/home-2';
+@import 'pages/home-3';
+@import 'pages/blog-grid';
+@import 'pages/blog-details';
+@import 'pages/contact';
+@import 'pages/shared-hosting';
+@import 'pages/domain';
+@import 'pages/wp-hosting';
+@import 'pages/vps-hosting';
+@import 'pages/signup';
+@import 'pages/dedicated-server';
+@import 'pages/reseller-hosting';
+@import 'pages/game-hosting.scss';
+@import 'pages/cloud-hosting';
+@import 'pages/home-4';
+@import 'pages/home-5';
+@import 'pages/terms.scss';
+@import 'pages/affiliate';
+@import 'pages/pricing';
+@import 'pages/email-hosting';
+@import 'pages/black-friday';
+@import 'pages/404';
+@import 'pages/status';
+@import 'pages/home-6';
+@import 'pages/home-7';
+@import 'pages/data-center';
+@import 'pages/career';
+@import 'pages/compare-plans';
+
+//Theme Dark 
+@import 'theme/theme-dark';

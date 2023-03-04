@@ -1,0 +1,100 @@
+.pricing-plan-slider {
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            width: 16px; 
+            height: 16px; 
+            background: transparent; 
+            border: 1px solid transparent;
+            opacity: 1;
+            position: relative;
+            margin: 1px;
+            &::before {
+                content: ''; 
+                position: absolute; 
+                left: 50%; 
+                top: 50%; 
+                transform: translate(-50%, -50%); 
+                width: 8px; 
+                height: 8px; 
+                background-color: $secondary-color;
+                border-radius: 50%;
+            }
+            &.swiper-pagination-bullet-active {
+                border-color: $primary-color;
+                &::before {
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}
+.pricing-plan-single {
+    .pricing-amount {
+        h3 {
+            color: $light-red;
+        }
+    }
+}
+.manage-table-pricing-wrapper {
+    padding: 80px 40px 60px;
+    .table {
+        th {
+            background: $light-bg;
+        }
+        td {
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}
+
+.managed-plan {
+    table {
+        vertical-align: middle;
+        th, td {
+            padding: 24px 24px;
+            border: 0;
+        }
+        tr:not(:first-child) {
+            transition: $transition; 
+            &:hover {
+                box-shadow: $h5-box-shadow;
+            }
+        }
+        td {
+            min-width: 180px;
+            &.item-name {
+                min-width: 220px;
+            }
+        }
+        td.item-name {
+            strong {
+                display: block;
+                font-size: 18px;
+            }
+            span {
+                font-size: 14px;
+            }
+        }
+        td.price-amount {
+            min-width: 280px;
+            span {
+                font-size: 24px;
+                font-family: $heading-font; 
+                font-weight: 700;
+                .sub-text {
+                    font-size: 18px;
+                }
+            }
+            .template-btn {
+                margin-left: 50px;
+                padding: 12px 24px;
+                font-size: 15px;
+            }
+            @include screen-1400 {
+                .template-btn {
+                    margin-left: 24px;
+                }
+            }
+        }
+    }
+}

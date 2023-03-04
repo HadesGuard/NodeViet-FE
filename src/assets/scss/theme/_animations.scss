@@ -1,0 +1,86 @@
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0px rgba($primary-color, 0.2),
+                0 0 0 2px rgba($primary-color, 0.2),
+                0 0 0 4px rgba($primary-color, 0.2),
+                0 0 0 8px rgba($primary-color, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 3px rgba($primary-color, 0.2),
+                0 0 0 6px rgba($primary-color, 0.2),
+                0 0 0 9px rgba($primary-color, 0.2),
+                0 0 0 12px rgba($primary-color, 0);
+  }
+}
+
+@keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    60% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    60% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes btn-ripple {
+  0% {
+    box-shadow: 0 0 0 0 $gm-primary-color; 
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(1, 93, 199, 0); 
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(1, 93, 199, 0); 
+  } 
+}
+
+@keyframes loading {
+  0% {
+    width: 0; 
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes letters-loading {
+  0%,
+  75%,
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+
+  25%,
+  50% {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}

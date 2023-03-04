@@ -1,0 +1,151 @@
+/******************** compare plans ***************/
+.cmp-pricing-single {
+    .popular-badge {
+        top: 32px;
+        right: -125px;
+    }
+}
+.cmp-pricing-slider-groups {
+    padding: 0 15px;
+}
+.cmp-pricing-control {
+    position: absolute;
+    left: 0; 
+    top: 50%; 
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 30px; 
+    height: 30px; 
+    line-height: 30px; 
+    display: inline-block; 
+    text-align: center;
+    font-size: 15px;
+    border: 1px solid $secondary-color; 
+    color: $secondary-color;
+    background-color: transparent;
+    border-radius: 4px;
+    transition: $transition;
+    &::before {
+        content: ''; 
+        position: absolute;
+        left: -1px; 
+        top: -1px; 
+        width: calc(100% + 2px); 
+        height: calc(100% + 2px); 
+        background-image: $primary-gradient;
+        z-index: -1;
+        border-radius: 4px;
+        opacity: 0; 
+        transition: $transition;
+    }
+    &.cmp-pricing-next {
+        left: auto; 
+        right: 0;
+    }
+    &:hover {
+        color: $white-color; 
+        border-color: transparent;
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.compare-explore {
+    color: $heading-color; 
+    font-weight: 700;
+    transition: $transition;
+    span {
+        width: 24px; 
+        height: 24px;
+        background-color: $light-red;
+        color: $white-color;
+        transition: $transition;
+    }
+    &:hover {
+        color: $primary-color; 
+        span {
+            background-color: $primary-color;
+        }
+    }
+}
+
+/*************** pricing table *************/ 
+.vps-pricing-table-2 {
+    table {
+        thead {
+            tr {
+                th {
+                    background-color: $heading-color; 
+                    background-image: none;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    a {
+                        border-radius: 6px;
+                    }
+                }
+            }
+        }        
+    }
+}
+
+/******************* dedicated pricing *****************/ 
+.cmp-dedicated-pricing {
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0 24px;
+    }
+    tr {
+        background-color: $white-color;
+        border-radius: 6px;
+        td {
+            text-align: left;
+            padding: 24px 16px;
+            strong {
+                display: block;
+                color: $heading-color;
+            }
+            .pricing-data {
+                h4 {
+                    color: $light-red;
+                    span {
+                        color: $heading-color;
+                    }
+                }
+            }
+        }
+    }
+    
+    @include screen-1440 {
+        tbody {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        tr {
+            display: inline-flex;
+            flex-wrap: wrap;
+            width: calc(50% - 24px);
+            td {
+                width: 50%;
+                &.plan-title {
+                    width: 100%; 
+                    flex-shrink: 0;
+                }
+                &:last-child {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include small-screen {
+        tr {
+            width: 100%;
+        }
+    }
+}

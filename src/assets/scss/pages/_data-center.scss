@@ -1,0 +1,101 @@
+.data-center-hero {
+    padding: 160px 0 340px 0;
+}
+
+.data-center-filter {
+    margin-top: -215px;
+}
+.data-center-filter-btns {
+    button {
+        background-color: transparent;
+        border: 0; 
+        color: $white-color;
+        font-weight: 600;
+        padding: 2px 8px;
+        border-bottom: 1px solid $warning-text;
+        border-width: 0;
+        transition: $transition;
+        position: relative;
+        margin-bottom: 10px;
+        &::before {
+            content: ''; 
+            position: absolute; 
+            right: 0; 
+            bottom: -3px;
+            width: 0; 
+            height: 1px; 
+            background-color: $warning-text;
+            transition: $transition;
+        }
+        &.active {
+            &::before {
+                width: 100%;
+                right: auto; 
+                left: 0;
+            }
+        }
+    }
+}
+
+.dc-location {
+    padding: 50px 40px;
+    box-shadow: $dtc-box-shadow;
+    .ip-address {
+        color: $heading-color; 
+        span {
+            color: $paragraph-color; 
+        }
+    }
+}
+
+/***************** feature section start **************/ 
+.dtc-title {
+    mark {
+        color: $light-red;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -15px;
+            width: 100%;
+            height: 20px;
+            background: url('../img/shapes/curve-line.svg');
+            background-repeat: no-repeat;
+        }
+    }
+    &.dtc-title2 {
+        mark {
+            color: $warning-text; 
+            &::after {
+                background: url('../img/home2/shape/curve-line.svg')
+            }
+        }
+    }
+}
+
+/************* partner section start *************/ 
+.dtc-partner-section {
+    background-color: $heading-color;
+}
+
+.dtc-partners-list {
+    gap: 24px;
+    @include small-screen {
+        gap: 16px;
+    }
+}
+.dtc-partner-single {
+    width: calc(20% - 20px);
+    height: 138px;
+    padding: 12px;
+    @include large-screen {
+        width: calc(25% - 18px);
+    }
+    @include medium-screen {
+        width: calc(33% - 14px);
+    }
+    @include small-screen {
+        width: calc(50% - 12px);
+        height: 130px;
+    }
+}

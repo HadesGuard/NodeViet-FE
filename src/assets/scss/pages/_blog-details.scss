@@ -1,0 +1,192 @@
+.bd-content-wrapper {
+    padding: 55px 30px 70px 30px;
+    .bd-blog-meta {
+        div {
+            + div {
+                position: relative; 
+                &::before {
+                    content: ''; 
+                    position: absolute;
+                    left: -25px; 
+                    top: 50%;
+                    transform: translateY(-50%); 
+                    width: 1px; 
+                    height: 50px; 
+                    background: #CBCBCB;
+                }
+            }
+        }
+        @include small-screen {
+            div {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    blockquote {
+        background: rgba(241, 243, 255, 0.5);
+        padding: 45px 30px;
+        position: relative;
+        &::before {
+            content: ''; 
+            position: absolute; 
+            left: 0; 
+            top: 0;
+            width: 5px; 
+            height: 100%; 
+            background: $primary-gradient;
+            border-radius: 10px 0 0 10px;
+        }
+        .bd-quote-author {
+            position: relative;
+            padding-left:  60px;
+            &::before {
+                content: ''; 
+                position: absolute; 
+                left: 0; 
+                bottom: 3px; 
+                width: 50px; 
+                height: 3px; 
+                background: $primary-gradient;
+            }
+        }
+    }
+    .social-icons {
+        a {
+            width: 40px; 
+            height: 40px; 
+            border-radius: 50%; 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-right: 6px;
+            &.facebook {
+                color: $facebook;
+                background: #E9F1FF;
+            }
+            &.instagram {
+                color: $instagram; 
+                background: rgba(255, 73, 143, 0.1); 
+            }
+            &.dribble {
+                color: $dribbble; 
+                background: rgba(234, 76, 137, 0.1); 
+            }
+            &.behance {
+                color: $behance; 
+                background: #E9F1FF;
+            }
+        }
+    }
+    .bd-blog-tags {
+        a {
+            background: #F1F1F1; 
+            border-radius: 30px;
+            display: inline-block;
+            color: $heading-color; 
+            font-weight: 500;
+            font-size: 13px;
+            padding: 6px 18px;
+            margin-right: 5px;
+        }
+    }
+    .bd-author-info {
+        padding: 30px; 
+        background-color: rgba(241, 243, 255, 0.5); 
+    }
+    .bd-rl-post-wrapper {
+        h6 {
+            transition: $transition; 
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        span {
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+    .spacer {
+        border: 0;
+        opacity: 1;
+        border-top: 1px solid #EBEBEB;
+    }
+    .bd-comment-area {
+        ol {
+            margin: 0; 
+            padding: 0;
+            list-style-type: none;
+            li {
+                margin-top: 60px;
+                padding-top: 30px;
+                border-top: 1px solid #EBEBEB;                
+                .comment-box-wrapper {
+                    .comment-user-info {
+                        .date {
+                            top: 0; 
+                            right: 0;
+                            font-weight: 500;
+                            font-size: 14px;
+                            position: absolute;
+                            @include portrait-phone {
+                                position: initial;
+                            }
+                        }
+                        p {
+                            padding-right: 15px;
+                        }
+                        button {
+                            color: $heading-color;
+                            font-family: $heading-font;
+                            font-weight: 600;
+                            border: 0; 
+                            background: transparent;
+                        }
+                    }
+                }
+                ol {
+                    padding-left: 50px;
+                }
+            }
+        }
+        & > ol {
+            & > li {
+                &:first-child {
+                    border-top: 0;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+    .bd-comment-form {
+        form {
+            .input-field {
+                position: relative;        
+                label {
+                    position: absolute;
+                    left: 20px; 
+                    top: -12px;
+                    color: $heading-color; 
+                    font-weight: 600; 
+                    font-family: $heading-font;
+                    border-radius: 5px;
+                }
+                input, 
+                textarea {
+                    width: 100%;
+                    padding: 15px 18px;
+                    font-size: 14px; 
+                    color: #C7C7C7; 
+                    border: 1px solid #E7E7E7;
+                    border-radius: 6px;
+                    background-color: #FAFAFA;
+                }
+            }
+            .primary-btn {
+                margin-top: 30px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,713 @@
+/*************** slider hero section start ************/ 
+.hm7-hero-slider {
+    .hm7-hero-slide-control {
+        position: absolute;
+        right: 48px;
+        bottom: 46px;
+        z-index: 2;
+        width: 64px; 
+        height: 64px;
+        border: 1px solid $white-color; 
+        color: $white-color;
+        border-radius: 10px;
+        display: inline-flex; 
+        align-items: center; 
+        justify-content: center;
+        font-size: 20px;
+        transition: $transition; 
+        &::before {
+            content: ''; 
+            position: absolute;
+            left: -1px;
+            top: -1px;
+            width: calc(100% + 2px);
+            height: calc(100% + 2px);
+            background-image: $hm7-primary-gradient;
+            z-index: -1;
+            border-radius: 10px;
+            opacity: 0;
+            transition: $transition;
+        }
+        &:hover {
+            border-color: transparent; 
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+    .hm7-hero-slider-prev {
+        bottom: 122px;
+    }
+    @include screen-1600 {
+        .hm7-hero-slide-control {
+            bottom: calc(50% - 40px);
+        }
+        .hm7-hero-slider-prev {
+            bottom: calc(50% + 40px);
+        }
+    }
+    @include portrait-phone {
+        .hm7-hero-slide-control {
+            right: auto;
+            left: 100px;
+            bottom: 125px;
+        }
+        .hm7-hero-slider-prev {
+            bottom: 125px;
+            left: 12px;
+        }
+    }
+}
+.slider-hero-single {
+    padding: 148px 0 260px 0; 
+    background-repeat: no-repeat; 
+    background-position: center right;
+    &::before {
+        content: ''; 
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-image: $hm7-hero-gradient;
+        z-index: -1;
+    }
+    &.swiper-slide-active {
+        h4 {
+            animation: 0.7s fadeInUp;
+        }
+        h1 {
+            animation: 1s fadeInUp;
+        }
+        p {
+            animation: 1.2s fadeInUp;
+        }
+        .hm7-hero-btns {
+            animation: 1.5s fadeInUp;
+        }
+    }
+}
+.hm7-hero-content {
+    .hm7-hero-subtitle {
+        color: $light-red;
+    }
+}
+.hm7-hero-btns {
+    gap: 32px;
+}
+
+.hero-social-2 {
+    & > span {
+        color: $white-color;
+        &::before {
+            background-color: $white-color;
+        }
+    }
+    .social-list {
+        li {
+            a {
+                color: $white-color;
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    @include screen-1400 {
+        left: -115px;
+    }
+}
+
+
+/****************** feature section start ****************/
+.hm7-features {
+    margin-top: -80px;
+    @include portrait-phone {
+        overflow: hidden;
+    }
+}
+.hm7-feature-box {
+    position: relative;
+    z-index: 2;
+    .light-color-shape {
+        position: absolute;
+        left: -15px; 
+        top: -15px;
+        width: 100%;
+        height: 100%;
+        background-color: $light-shape-color;
+    }
+    @include portrait-phone {
+        .light-color-shape {
+            overflow: hidden;
+        }
+    }
+}
+.hm7-feature-box {
+    padding: 40px 8px;
+    box-shadow: $hover-shadow;
+}
+.hm7-feature-single {
+    padding: 0 32px;
+    position: relative;
+    p {
+        font-size: 15px;
+    }
+    &.border-right {
+        &::after {
+            content: ''; 
+            position: absolute; 
+            right: 8px; 
+            top: 50%;
+            transform: translateY(-50%);
+            width: 2px; 
+            height: 80px;
+            background-color: $hm7-border-color;
+            opacity: 0.5;
+        }
+    }
+    @include large-screen {
+        &.border-right {
+            &::after {
+                display: none;
+            }
+        }
+    }
+    @include medium-screen {
+        padding: 0 16px;
+    }
+}
+
+/***************** about section start ****************/ 
+.hm7-about-left {
+    .circle-shape-gradient {
+        width: 84px;
+        height: 84px;
+        background: $circle-shape-gradient;
+        left: -40px;
+        top: -40px;
+        opacity: 0.2;
+    }
+}
+.hm7-counter-circle {
+    width: 168px;
+    height: 168px;
+    padding: 13px;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+    .counter-circle-wrapper {
+        width: 100%; 
+        height: 100%; 
+        background-color: $light-red; 
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/************ domain section start **************/ 
+.hm7-domain-section {
+    background-color: $hm7-light-color;
+    .wave {
+        right: 78px; 
+        top: 55px;
+    }
+    .dm-object {
+        left: 40px; 
+        top: 40px;
+    }
+}
+.hm7-domain-content {
+    padding: 80px 0;
+    form {
+        input[type='text'] {
+            border-color: $white-color;
+            &::placeholder {
+                color: $mn-border-color;
+            }
+        }
+        .form-select {
+            border-color: $white-color;
+        }
+    }
+}
+.hm7-dm-feature-img {
+    .dm-feature-img {
+        position: absolute;
+        bottom: 0; 
+        left: 50%; 
+        transform: translateX(-50%);
+    }
+    .circle-gradient {
+        width: 180px; 
+        height: 180px; 
+        background-image: $hm7-circle-shape-gradient;
+        right: 50px; 
+        top: 55px;
+    }
+    .doted {
+        left: 35px;
+        top: 40%;
+    }
+    @include medium-screen {
+        .dm-feature-img {
+            position: relative;
+            left: auto;
+            bottom: 0;
+            transform: translate(0);
+        }
+    }
+}
+
+
+/****************** pricing table start ***************/
+.hm7-title {
+    .hm7-subtitle {
+        color: $primary-color;
+    }
+}
+.hm7-pricing-table-tab {
+    .nav-tabs {
+        max-width: 1100px;
+        margin: 0 auto 40px;
+        li {
+            a {
+                color: $paragraph-color;
+                font-weight: 600;
+                position: relative;
+                padding: 0 30px;
+                &::before {
+                    content: ''; 
+                    position: absolute; 
+                    left: 0; 
+                    bottom: -4px; 
+                    width: 0;
+                    height: 2px;
+                    transition: $transition;
+                    background-image: $primary-gradient;
+                }
+                &.active {
+                    color: $heading-color;
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    @include large-screen {
+        .nav-tabs {
+            border: 0;
+            gap: 16px;
+            li {
+                a {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+.crm-pricing-table {
+    padding: 32px 32px 0;
+    border-radius: 10px 10px 0 0;
+    table {
+        margin-bottom: 0;
+        th {
+            border-right: 1px solid $hm7-border-color;
+            border-bottom: 0;
+            vertical-align: middle;
+            padding-bottom: 16px;
+            &.crm-pricing-switch-wrapper {
+                min-width: 290px;
+            }
+            &.crm-package-wrapper {
+                min-width: 190px;
+            }
+            &:last-child {
+                border-right: 0;
+            }
+        }
+        .title-sm {
+            font-family: $heading-font;
+            font-weight: 600;
+            color: $heading-color;
+            display: block;
+        }
+        .crm-package-price {
+            display: block;
+            font-size: 24px;
+            font-family: $heading-font;
+            font-weight: 700;
+            color: $heading-color;
+            &.crm_monthly_price {
+                display: none;
+            }
+        }
+        .crm-package-subtitle {
+            font-size: 12px;
+            font-weight: 400;
+        }
+        .crm-package-btn {
+            border: 1px solid $heading-color;
+            color: $paragraph-color;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            &::before {
+                content: ''; 
+                position: absolute;
+                left: 0; 
+                top: 0; 
+                width: 100%; 
+                height: 100%;
+                background-image: $primary-gradient;
+                z-index: -1;
+                opacity: 0; 
+                transition: $transition;
+            }
+            &:hover {
+                background-color: $primary-color;
+                color: $white-color;
+                border-color: transparent;
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.crm-pricing-switch-wrapper {
+    .arrow-shape {
+        position: absolute;
+        width: 40px;
+        left: 160px;
+        top: 75px;
+        transform: rotate(40deg);
+    }
+    .crm-offer-badge {
+        color: $hm7-light-red;
+        font-size: 12px;
+        font-weight: 600;
+        position: absolute;
+        left: 200px;
+        bottom: 60px;
+    }
+    .title {
+        font-size: 24px;
+        font-weight: 700; 
+        color: $heading-color;
+    }
+}
+
+.crm-pricing-switch {
+    display: flex; 
+    align-items: center;
+    button {
+        border: 0; 
+        background-color: transparent;
+        font-size: 14px; 
+        font-weight: 600;
+    }
+    .crm-switch {
+        width: 33px;
+        height: 16px;
+        display: inline-block;
+        border: 1px solid $heading-color;
+        border-radius: 30px;
+        position: relative;
+        cursor: pointer;
+        margin: 0 4px;
+        .crm-switch-dot {
+            position: absolute;
+            width: 11px; 
+            height: 11px;
+            background-color: $heading-color; 
+            border-radius: 50%; 
+            top: 50%; 
+            left: 2px;
+            transform: translateY(-50%);
+            transition: $transition;
+        }
+        .crm-checkbox-switch {
+            position: absolute;
+            left: 0; 
+            top: 0; 
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 1;
+            opacity: 0;
+            &:checked {
+                ~ .crm-switch-dot {
+                    left: 18px; 
+                }
+            }
+        }
+    }
+}
+.crm_pricing_feature_accordion {
+    padding: 0 32px 32px;
+    border-radius: 0 0 10px 10px;
+    .accordion-item {
+        + .accordion-item {
+            margin-top: 8px;
+        }
+        .accordion-header {
+            a {
+                background-color: $ds-bg;
+                display: block;
+                font-weight: 600;
+                font-family: $heading-font;
+                color: $heading-color; 
+                padding: 10px 17px 10px 32px;
+                position: relative;
+                &::before {
+                    position: absolute;
+                    left: 11px;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 8px;
+                    top: 50%; 
+                    transform: translateY(-50%);
+                    width: 20px; 
+                    height: 20px; 
+                    border-radius: 50%;
+                    border: 1px solid $heading-color;
+                    font-size: 14px;
+                }
+                &.collapsed {
+                    &::before {
+                        content: '\2b'; 
+                        font-family: 'FontAwesome', 
+                    }
+                }
+                &:not(.collapsed) {
+                    &::before {
+                        content: '\f068'; 
+                        font-family: 'FontAwesome',
+                    }
+                }
+            }
+        }
+    }
+}
+
+.crm_pricing_feature_table {
+    table {
+        margin-bottom: 0;
+    }
+    td {
+        border: 1px solid $hm7-border-color;
+        border-top: 0;
+        font-size: 14px;
+        color: $paragraph-color;
+        &:first-child {
+            border-left: 0;
+        }
+        &:last-child {
+            border-right: 0;
+        }
+    }
+    .crm_pricing_features_name {
+        min-width: 290px;
+    }
+    .crm_pricing_feature_check {
+        min-width: 190px;
+    }
+}
+
+.custom-plan-box {
+    background-image: $hm7-black-gradient;
+    border-radius: 10px;
+    padding: 60px 24px;
+    .flower-shape {
+        left: 16px;
+        bottom: 0;
+    }
+    .paper-pen {
+        right: 16px;
+        bottom: 0;
+    }
+}
+
+/*************** hostim platform *******************/
+.site_builder {
+    padding: 48px 24px 0;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+}
+.site_builder2 {
+    padding: 60px 24px 48px;
+}
+
+.hm7-feedback {
+    margin-top: -100px;
+    padding-top: 220px;
+    .hm7-desc {
+        position: relative; 
+        &::before {
+            content: ''; 
+            position: absolute;
+            left: -24px;
+            top: 50%; 
+            transform: translateY(-50%); 
+            width: 1px;
+            height: 80px;
+            background-color: $hm7-border-color;
+            opacity: 0.5;
+        }
+    }
+    .ds-google-rating-column {
+        img {
+            width: 55px;
+        }
+    }
+}
+.hm7-feedback-wrapper {
+    margin: 48px auto 0;
+    position: relative;
+    .hm7-feedback-slide-control {
+        position: absolute;
+        top: 50%; 
+        transform: translateY(-50%);
+        z-index: 2;
+        border: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        color: $white-color;
+        transition: $transition;
+        &:hover {
+            background-color: $heading-color;
+            transform: translateY(-50%) rotate(-25deg);
+        }
+        &.hm7-feedback-prev {
+            left: -15px;
+        }
+        &.hm7-feedback-next {
+            right: -15px;
+        }
+        @include portrait-phone {
+            display: none;
+        }
+    }
+}
+
+.hm7-feedback-single {
+    padding: 48px 24px;
+    gap: 48px;
+    box-sizing: border-box;
+    .clients_info {
+        width: 245px;
+    }
+    .clients_feedback {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 50%; 
+            transform: translateY(-50%);
+            width: 1px;
+            height: 138px;
+            background-color: $hm7-border-color;
+            opacity: 0.5;
+        }
+    }
+    @include medium-screen {
+        .clients_info {
+            width: 30%;
+        }
+    }
+    @include portrait-phone {
+        flex-wrap: wrap;
+        gap: 24px;
+        .clients_info {
+            width: 100%;
+        }
+        .clients_feedback {
+            text-align: center;
+            &::before {
+                display: none;
+            }
+        }
+    }
+}
+
+/**************** application section start ****************/
+.hm7-application-box {
+    background-image: $hm7-black-gradient;
+    padding: 60px 40px 0;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    .hm7-app-slide-control {
+        position: absolute;
+        bottom: -26px;
+        width: 54px;
+        height: 54px;
+        display: inline-flex; 
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        background-color: $white-color;
+        color: $heading-color;
+        box-shadow: $hover-shadow;
+        transition: $transition;
+        overflow: hidden;
+        z-index: 1;
+        &::before {
+            content: ''; 
+            position: absolute;
+            left: 0; 
+            width: 100%;
+            top: 0; 
+            height: 100%;
+            background-image: $primary-gradient;
+            z-index: -1;
+            opacity: 0;
+            transition: $transition;
+        }
+        &:hover {
+            color: $white-color;
+            &::before {
+                opacity: 1;
+            }
+        }
+        &.hm7-app-slide-prev {
+            left: 24px;
+        }
+        &.hm7-app-slide-next {
+            left: 95px;
+        }
+        @include large-screen {
+            display: none;
+        }
+    }
+}
+.hm7-application-slider {
+    margin-bottom: -75px;
+}
+.next-section {
+    margin-top: -100px;
+}
+.hm7-app-item {
+    transition: $transition;
+    &:hover {
+        box-shadow: $hm7-hover-shadow;
+    }
+}
+
+/****************** blog section start ***************/
+.h7-blog {
+    padding-top: 300px;
+    margin-top: -130px;
+}

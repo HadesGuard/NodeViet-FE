@@ -1,0 +1,61 @@
+/*********** Contact Hero ************/
+.contact-hero {
+    .hero-area {
+        padding-bottom: 160px;
+    }
+    .primary-btn {
+        i {
+            -webkit-text-stroke-width: 1px; 
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+.hm-ct-info-wrapper {
+    padding: 0 30px 30px 30px;
+    margin-bottom: 60px;
+    background: $white-color;
+    box-shadow: 0px 12px 50px rgb(125 125 125 / 20%);
+    .icon-wrapper {
+        position: relative;
+        width: 65px; 
+        height: 65px;
+        background: linear-gradient(95.45deg, #0082F8 0.64%, #1C40F2 98.23%);
+        box-shadow: 0px 10px 25px rgba(0, 130, 248, 0.6);
+        z-index: 1;
+        margin-top: -45px;
+        color: $white-color;
+        font-size: 22px;
+    }
+    .info-content {
+        span {
+            font-weight: 500;
+        }
+    }
+}
+.hm-contact-form {
+    .input-field {
+        position: relative;        
+        label {
+            position: absolute;
+            left: 20px; 
+            top: -12px;
+            color: $heading-color; 
+            font-weight: 600; 
+            font-family: $heading-font;
+            border-radius: 5px;
+            padding: 0 10px; 
+            background: $white-color;
+        }
+        input, 
+        textarea {
+            width: 100%;
+            padding: 22px 20px 18px 20px;
+            font-size: 14px; 
+            color: #656565; 
+            border: 1px solid #E7E7E7;
+            border-radius: 6px;
+            background-color: $white-color;
+            margin-bottom: 10px;
+        }
+    }
+}   

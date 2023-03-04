@@ -1,0 +1,155 @@
+// Template Font Name
+$heading-font: 'Urbanist', sans-serif;
+$body-font: 'Mulish', sans-serif;
+
+
+// Template Color Name
+$primary-color: #1C40F2;
+$secondary-color: #000F57; 
+$primary-gradient: linear-gradient(95.45deg, #0082F8 0.64%, #1C40F2 98.23%);
+$secondary-gradient: linear-gradient(279.3deg, #001dacf0 2.98%, #000F57 98.6%);
+$primary-hover-gradient: linear-gradient(95.45deg, #1C40F2 98.23%, #0082F8 0.64%);
+$white-color: #ffffff;
+$section-gradient: linear-gradient(278.54deg, #001DAC 15.93%, #000F57 98.7%);
+$gm-primary-color: #F16262;
+$gm-primary-gradient: linear-gradient(96.49deg, #F16262 0%, #3200FF 102.71%);
+$gm-primary-hover-gradient: linear-gradient(96.49deg, #3200FF 0%, #F16262 102.71%);
+$info-bg: #09E8E3;
+
+//Typography Color
+$heading-color: #001042; 
+$paragraph-color: #666666;
+$deep-color: #C7C7C7;
+$warning-text: #FFB800;
+$primary-text: #1ED6FE;
+$danger-text: #FC4349;
+$success-text: #00D172;
+$blue-text: #9900EC; 
+$info-text: #FAC600;
+
+//Template Shadows
+$deep-shadow: 0px 12px 50px rgba(125, 125, 125, 0.1);
+$primary-shadow: 0px 20px 80px rgba(0, 148, 255, 0.05);
+$light-bg: #F6F6F6;
+
+//Dark Themme
+$dark-content-bg: #33313D;
+$dark-bg: #1E1E2C;
+$dark-gradient:  linear-gradient(95.45deg, #33313D 0.64%, #1E1E2C 98.23%);
+$dark-hover-bg: #ffffff20;
+$dark-light-bg: rgba(255,255,255,0.1);
+$dark-border: #c0d5ff0f;
+
+// Social Media Color
+$facebook: #3F6DC7;
+$twitter: #009DED;
+$dribbble: #ea4c89;
+$behance: #131418;
+$google-plus: #dd4b39;
+$linkedin: #0077B5;
+$instagram: #e4405f;
+$youtube: #FF0000; 
+$drupal: #03A9F4;
+$magento: #EC6737;
+$wordpress: #00769D;
+$zoomla: #F44321;
+
+
+
+// Transition
+$transition: all .3s ease-in;
+
+
+//Home2 Variables 
+$hm2-primary-color: #FF6E5F;
+$hm2-primary-gradient: linear-gradient(287.85deg, #FF0766 0%, #FF7E5D 95.32%);
+$hm2-primary-hover-gradient: linear-gradient(287.85deg, #FF7E5D 0%, #FF0766 95.32%);
+
+//Dedicated Server Page
+$ds-bg: #F6F9FF;
+$light-red: #FF0766;
+$overlay-bg: #001042;
+
+//Reseller Hosting
+$rs-yellow: #FFC700;
+$rs-border: rgba(244, 244, 244, 0.3);
+$rs-bg: #000F57;
+$rs-table-border: #C0D5FF;
+
+//Game Hosting 
+$gh-bg: #14161D;
+$gh-primary-gradient: linear-gradient(287.85deg, #FF0766 0%, #FF7E5D 95.32%);
+$gh-heading-color: #B8B9BB;
+$gh-text-color: #898A8E;
+$gh-secondary-color: #FF7E5D;
+$gh-overlay: linear-gradient(180deg, #14161D 58.61%, rgba(20, 22, 29, 0) 100%);
+$light-white: rgba(255, 255, 255, 0.04);
+$gh-paragraph: #C1C1C1;
+$gh-content-bg: #1C1E25;
+$gh-list-color: #BCBCBC;
+$gh-counter-bg: linear-gradient(114.61deg, #03060F 35.3%, #140F18 53.07%);
+$gh-border-color: #363739;
+$gh-feedback-bg: #2B2D34;
+$gh-icon-bg: linear-gradient(180deg, rgba(30, 30, 44, 0.5) 0%, rgba(0, 0, 0, 0.5) 68.53%);
+$gh-light-black: rgba(0, 0, 0, 0.35);
+
+//cloud hosting
+$trust-pilot: #00D6C9;
+$cd-secondary-color: #F2F8FE;
+$cd-background: #EBF5FE;
+$cd-dark-bg: #3434417a;
+$cd-deep-bg: #D4EAFF;
+$cd-shape-gradient: linear-gradient(180deg, #D7E5FF 0%, #F6F9FF 100%);
+
+
+//Home4
+$h4-shape-gradient: linear-gradient(90deg, #1C40F2 -0.5%, #03F8FB 97.45%);
+$h4-submenu-color: #00157a;
+$h4-submenu-hover-color: #ffffff1c;
+$orange-light: rgba(249, 165, 65, 0.1);
+$light-blue: #E6F6FE;
+$h4-border-color: #EAEAEA;
+$h4-placeholder: #B7B7B7;
+$h4-box-shadow: 4px 10px 50px rgba(90, 108, 234, 0.1);
+$h4-shape-large: linear-gradient(90deg, rgba(28, 64, 242, 0) -0.5%, #03F8FB 97.45%);
+
+//Home5 
+$h5-input-bg: #F2F2F5;
+$h5-placeholder: #A8A8A8;
+$h5-item-shadow: 12px 26px 50px rgba(90, 108, 234, 0.07);
+$light-black: rgba(0, 0, 0, 0.1);
+$border-color: #EAEAEA;
+$hover-shadow: 12px 26px 50px rgba(90, 108, 234, 0.07);
+$h5-circle-gradient: linear-gradient(271.06deg, rgba(28, 64, 242, 0.7) 3.8%, rgba(1, 17, 100, 0) 89.03%);
+$h5-box-shadow: 0px 12px 64px rgba(103, 151, 255, 0.1), 0px 4px 24px rgba(103, 151, 255, 0.1);
+$h5-feedback-shape: rgba(255, 7, 102, 0.1);
+$light-shadow: 0px 0px 10px rgba(90, 108, 234, 0.1);
+$h5-dark-border: #ffffff21;
+
+//Black Friday
+$black-bg: #1F1F1F;
+$circle-shape-gradient: linear-gradient(286.17deg, #335EF7 0%, #5F82FF 100%);
+$package-bg: #2A2A2A;
+
+//minimal hero
+$minimal-primary: #5041BC;
+$minimal-secondary: #FF8057;
+$mn-border-color: #E7E7E7;
+$mn-box-shadow: 12px 12px 25px rgba(90, 108, 234, 0.07);
+$mn-primary-shadow: 12px 15px 30px rgba(80, 65, 188, 0.24);
+$mn-text-color: #696969;
+
+//slider home 
+$hm7-primary-gradient: linear-gradient(90deg, #6AAEFF 0%, #005EFF 100%);
+$hm7-hero-gradient: linear-gradient(85.83deg, #000E50 43.12%, rgba(0, 14, 80, 0.673076) 53.17%, rgba(0, 14, 80, 0) 83.05%);
+$hm7-black-gradient: linear-gradient(101.48deg, #102062 -0.49%, #060B43 97.87%);
+$hm7-light-red: #FF724B;
+$hm7-border-color: #E3E3E3;
+$light-shape-color: rgba(246, 249, 255, 0.15);
+$hm7-hover-shadow: 10px 10px 25px rgba(90, 108, 234, 0.1);
+$hm7-light-color:#EAF8FF;
+$hm7-circle-shape-gradient: linear-gradient(44.58deg, #EAF8FF 37.42%, #6DE5FF 133.66%);
+
+//Data center
+$dtc-box-shadow: 0px 20px 30px rgba(211, 209, 216, 0.2);
+$dtc-box-shadow-dark: 0px 20px 30px rgba(52, 52, 54, 0.2);

@@ -1,0 +1,241 @@
+/********** hero section start *********/ 
+.ds-hero {
+    .ds-hero-dot {
+        left: 50px; 
+        bottom: 50px;
+        z-index: -1;
+    }
+    .ds-hero-left {
+        p {
+            max-width: 450px;
+        }
+    }
+}
+.ds-hero-list {
+    flex-wrap: wrap;
+    li {
+        margin-right: 24px;
+        margin-bottom: 10px;
+        font-size: 18px; 
+        font-weight: 700;
+        color: $white-color;
+    }
+}
+
+/********** pricing section start ***********/ 
+.ds-pricing-item {
+    padding: 40px 30px;
+    .ds-pricing-list {
+        li {
+            font-size: 14px;
+            display: flex; 
+            align-items: center;
+            margin-bottom: 10px;
+            span {
+                color: $primary-color; 
+                font-size: 14px;
+            }
+        }
+        &.border-left {
+            position: relative;
+            &::before {
+                content: ''; 
+                position: absolute;
+                left: -40px;
+                top: 50%;
+                width: 1px; 
+                height: 80px;
+                background: #E9E9E9;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    .item-bottom {
+        gap: 24px;
+    }
+    .item-price-amount {
+        h4 {
+            color: $light-red;
+            span {
+                font-size: 16px;
+                font-weight: 500;
+                color: $heading-color;
+            }
+        }
+    }
+    @include desktop {
+        .ds-pricing-list {
+            &.border-left {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    @include small-screen {
+        .ds-pricing-list {
+            &.border-left {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.ds-pricing-feature-item {
+    padding: 24px;
+    span {
+        width: 40px; 
+        height: 40px; 
+        background: linear-gradient(279.3deg, #001DAC 2.98%, #000F57 98.6%);
+    }
+    p {
+        color: $heading-color;
+    }
+}
+
+/*********** about section start ************/ 
+.ds-about {
+    @include portrait-phone {
+        background: linear-gradient(27.79deg, rgba(0, 29, 172, 0.8) -148.73%, rgba(0, 15, 87, 0.8) 192.85%);
+        .ds-about-bg {
+            display: none;
+        }
+    }
+}
+.ds-about-content {
+    .ds-circle-shape {
+        position: absolute;
+        right: -60px;
+        bottom: -60px;
+        width: 150px; 
+        height: 150px;
+        background: linear-gradient(180deg, #D7E5FF 0%, #F6F9FF 100%);
+        z-index: -1;
+        border-radius: 50%;
+        @include portrait-phone {
+            opacity: 0.1;
+        }
+    }
+}
+.ds-about-column {
+    padding: 40px 30px;
+    box-shadow: 2px 15px 20px rgba(175, 175, 175, 0.2);
+}
+
+/************** feature section start *************/ 
+.ds-feature-item {
+    box-shadow: 16px 33.8064px 67.6129px rgba(51, 94, 247, 0.06);
+    padding: 40px 20px;
+}
+
+/*********** call to action start **********/ 
+.ds-cta-content {
+    padding: 0 120px 0 45px;
+    .cta-dots {
+        bottom: 20px;
+    }
+    .ds-cta-left {
+        padding: 40px 0;
+    }
+    @include medium-screen {
+        padding: 0 30px 0 30px;
+    }
+}
+.ds-cta-bottom {
+    gap: 24px;
+}
+.cta-phone-btn {
+    color: $white-color;
+    font-size: 18px;
+    font-weight: 700;
+    span {
+        width: 48px; 
+        height: 48px; 
+        background: $white-color;
+        color: $heading-color;
+    }
+    &:hover {
+        color: $white-color;
+    }
+}
+
+/************ feedback section start ************/ 
+.ds-feedback {
+    .ds-circle {
+        border-radius: 50%;
+        background: linear-gradient(211.09deg, #D7E5FF -29.12%, #F6F9FF 87.11%);
+        &.circle-large {
+            width: 300px; 
+            height: 300px;
+            right: -150px; 
+            bottom: 0px;
+        }
+        &.circle-small {
+            width: 100px; 
+            height: 100px;
+            left: -50px;
+            bottom: 100px;
+        }
+    }
+}
+.ds-feedback-single {
+    padding: 40px 25px;
+    box-shadow: 16.9032px 33.8064px 67.6129px rgba(51, 94, 247, 0.06);
+    .item-top-content {
+        span {
+            font-weight: 500;
+        }
+    }
+}
+.ds-google-rating-column {
+    padding: 30px 24px;
+    box-shadow: 16.9032px 33.8064px 67.6129px rgba(51, 94, 247, 0.06);
+}
+
+/*********** faq section start *************/ 
+.ds-faq {
+    background: $ds-bg;
+}
+.ds-faq-controls {
+    gap: 20px;
+    li {
+        button {
+            background: $white-color;
+            border: 0;
+            padding: 18px 24px;
+            border-radius: 5px;
+            font-family: $heading-font; 
+            font-weight: 700;
+            color: $heading-color;
+            transition: $transition;
+            position: relative;
+            z-index: 1;
+            &::before {
+                content: ''; 
+                position: absolute; 
+                left: 50%; 
+                bottom: 0px;
+                transform: translateX(-50%);
+                filter: blur(50px);
+                width: 98%;
+                height: 25px;
+                background: linear-gradient(95.45deg, #0082F8 0.64%, #1C40F2 98.23%);
+                transition: $transition; 
+                opacity: 0;
+                z-index: -1;
+            }
+            &.active {
+                background: $primary-color;
+                color: $white-color;
+                &::before {
+                    opacity: 1;
+                }
+            }
+            @include portrait-phone {
+                font-size: 15px;
+                padding: 15px 20px;
+            }
+        }
+    }
+}

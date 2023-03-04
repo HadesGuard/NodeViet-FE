@@ -1,0 +1,110 @@
+/* Author CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    -webkit-font-smoothing: antialiased;
+	font-family: $body-font;
+    color: $paragraph-color;
+    font-size: 1rem; 
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    color: $heading-color;
+    font-weight: 700;
+}
+
+.display-font {
+    font-size: 4.25rem; 
+    @include screen-1400 {
+        font-size: 3.6rem;
+    }
+    @include large-screen {
+        font-size: calc(3rem + 0.1vw);
+    }
+    @include portrait-phone {
+        font-size: 2.25rem;
+    }
+}
+
+h1 {
+    font-size: 3rem; 
+    @include large-screen {
+        font-size: calc(2rem + 1.5vw);
+    }
+}
+.h1 {
+    font-size: 3rem;
+    @include large-screen {
+        font-size: calc(2rem + 1.5vw);
+    }
+}
+
+h2 {
+    font-size: 2.625rem; 
+    @include large-screen {
+        font-size: calc(1.5rem + 1.3vw);
+    }
+}
+.h2 {
+    font-size: 2.625rem;
+    @include large-screen {
+        font-size: calc(1.5rem + 1.3vw);
+    }
+}
+h3 {
+    font-size: 1.875em; 
+    @include large-screen {
+        font-size: calc(1.3rem + 0.6vw);
+    }
+}
+.h3 {
+    font-size: 1.875rem; 
+    @include large-screen {
+        font-size: calc(1rem + 1.5vw);
+    }
+}
+
+h6 {
+    font-size: 1.125rem; 
+}
+.h6 {
+    font-size: 1.125rem;
+}
+.h1,
+.h2, 
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 700;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none;
+}

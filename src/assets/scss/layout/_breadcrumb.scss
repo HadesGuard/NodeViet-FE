@@ -1,0 +1,26 @@
+.breadcrumb-area {
+    padding: 130px 0 90px 0;
+    nav {
+       ol {
+           justify-content: center;
+           li {
+               color: $white-color;
+               font-weight: 500;
+               a {
+                   color: $white-color; 
+                   font-weight: 500;
+                   transition: $transition; 
+                   &:hover {
+                       color: $primary-color;
+                   }
+               }
+           }
+       }
+    }
+    @include small-screen {
+        padding: 45px 0;
+    }
+}
+.breadcrumb-item.active {
+    color: #9da7b0;
+}

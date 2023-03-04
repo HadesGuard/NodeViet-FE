@@ -1,0 +1,274 @@
+.template-btn {
+    display: inline-block; 
+    font-family: $heading-font; 
+    font-weight: 600; 
+    border-radius: 5px;
+    padding: 16px 32px;
+    color: $white-color;
+    vertical-align: middle;
+    overflow: hidden;
+    transition: $transition;
+    @include portrait-phone {
+        padding: 14px 30px;
+        font-size: 15px;
+    }
+}
+.primary-btn {
+    background: $primary-gradient;
+    position: relative;
+    z-index: 1;
+    span {
+        margin-left: 6px;
+    }
+    &::before {
+        content: ''; 
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        width: 102%; 
+        height: 100%; 
+        background: $primary-hover-gradient;
+        z-index: -1; 
+        opacity: 0; 
+        transition: $transition;
+    }
+    &:hover {
+        color: $white-color;
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+.outline-btn {
+    border: 1px solid $white-color;
+    padding: 15px 32px;
+    &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white-color;
+    }
+    @include portrait-phone {
+        padding: 13px 30px;
+    }
+}
+.outline-btn-2 {
+    border: 1px solid $heading-color;
+    color: $heading-color;
+    padding: 15px 32px;
+    &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white-color;
+    }
+    @include portrait-phone {
+        padding: 13px 30px;
+    }
+}
+.outline-btn-3 {
+    border: 1px solid $primary-color;
+    color: $heading-color;
+    padding: 15px 32px;
+    &:hover {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: $white-color;
+    }
+    @include portrait-phone {
+        padding: 13px 30px;
+    }
+}
+.secondary-btn {
+    background-color: $heading-color;
+    &:hover {
+        background-color: $primary-color;
+        color: $white-color;
+    }
+}
+.btn-red {
+    background: linear-gradient(287.85deg, #FF0766 0%, #FF7E5D 95.32%);
+    padding: 10px 30px;
+    position: relative;
+    z-index: 1; 
+    &::before {
+        content: ''; 
+        position: absolute;
+        left: 0; 
+        top: 0;
+        width: 100%; 
+        height: 100%;
+        background: linear-gradient(287.85deg, #FF7E5D 0%, #FF0766 95.32%);
+        z-index: -1;
+        opacity: 0; 
+        transition: $transition;
+    }
+    &:hover {
+        color: $white-color;
+        &::before {
+            opacity: 1; 
+        }
+    }
+}
+
+.btn-small {
+    padding: 12px 24px;
+    font-size: 15px;
+}
+
+.hm2-primary-btn {
+    background: $hm2-primary-gradient;
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: ''; 
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        width: 102%; 
+        height: 100%; 
+        background: $hm2-primary-hover-gradient;
+        z-index: -1; 
+        opacity: 0; 
+        transition: $transition;
+    }
+    &:hover {
+        color: $white-color;
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.outline-primary {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    &:hover {
+        background-color: $primary-color; 
+        color: $white-color;
+    }
+}
+
+.gm-primary-btn {
+    background: $gm-primary-gradient; 
+    position: relative; 
+    z-index: 1; 
+    overflow: visible;
+    &::before {
+        content: ''; 
+        position: absolute; 
+        left: 0; 
+        width: 100%; 
+        top: 0; 
+        height: 100%; 
+        background: $gm-primary-hover-gradient;
+        z-index: -1; 
+        opacity: 0; 
+        transition: $transition;
+        border-radius: 5px;
+    }
+    &::after {
+        content: ''; 
+        position: absolute; 
+        left: 50%; 
+        bottom: 0px;
+        transform: translateX(-50%);
+        width: 100px; 
+        height: 30px;
+        background: linear-gradient(96.49deg, #F16262 0%, #3200FF 102.71%);
+        filter: blur(20px);
+        z-index: -1;
+    }
+    &:hover {
+        color: $white-color;
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.gm-outline-btn {
+    display: inline-block;
+    background: $gm-primary-gradient; 
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 1px;
+    a {
+        padding: 15px 30px;
+        background: #1C1E25;
+    }
+    &:hover {
+        a {
+            background: transparent;
+            color: $white-color;
+        }
+    }
+}
+
+.rs-primary-btn {
+    background: $light-red;
+    i {
+        margin-left: 4px;
+    }
+    &:hover {
+        color: $white-color;
+        background: #ff0766d4;
+    }
+}
+
+.scrolltop-btn {
+    width: 45px; 
+    height: 45px; 
+    background: $primary-gradient;
+    position: fixed; 
+    right: 20px; 
+    bottom: 50px;
+    z-index: 10;
+    color: $white-color;
+    border: 0; 
+    border-radius: 50%;
+    display: none;
+}
+
+.gh-primary-btn {
+    background: $light-red;
+    &:hover {
+        background: $gh-secondary-color;
+        color: $white-color;
+    }
+}
+.gh-outline-btn {
+    border: 1px solid $white-color;
+    &:hover {
+        border-color: $light-red;
+        background: $light-red;
+        color: $white-color;
+    }
+}
+
+.cd-secondary-btn {
+    background: $cd-secondary-color;
+    color: $primary-color;
+    font-weight: 700;
+    &:hover {
+        background: $primary-color;
+        color: $white-color;
+    }
+}
+
+.mn-primary-btn {
+    background-color: $minimal-primary; 
+    color: $white-color;
+    &:hover {
+        background-color: $minimal-secondary;
+        color: $white-color;
+    }
+}
+
+.mn-secondary-btn {
+    background-color: $minimal-secondary; 
+    color: $white-color; 
+    &:hover {
+        background-color: $minimal-primary; 
+        color: $white-color;
+    }
+}
+

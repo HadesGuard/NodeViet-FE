@@ -1,0 +1,236 @@
+.rs-hero {
+    padding: 220px 0 350px 0;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    &::before {
+        content: ''; 
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%;
+        background: $overlay-bg;
+        z-index: -1;
+        opacity: 0.9;
+    }
+    .lock-shape {
+        top: -60px;
+        left: 0;
+        @include medium-screen {
+            left: -140px;
+            top: -40px;
+        }
+    }
+    .power-btn {
+        bottom: -60px;
+        left: 60px;
+        @include medium-screen {
+            left: 0;
+        }
+    }
+    .browser {
+        right: 0;
+        top: 0;
+        @include screen-1400 {
+            right: -100px;
+        }
+        @include medium-screen {
+            right: -200px;
+            bottom: 0px;
+            top: auto;
+        }
+        @include portrait-phone {
+            display: none;
+        }
+    }
+}
+.rs-hero-checklist {
+    gap: 24px;
+    li {
+        color: $white-color;
+        font-size: 18px; 
+        font-weight: 700;
+    }
+    @include portrait-phone {
+        gap: 20px;
+    }
+}
+
+/********** pricing plan ************/ 
+.rs-pricing {
+    .rs-pricing-filter {
+        margin-top: -200px;
+        position: relative; 
+        z-index: 1;
+    }
+}
+.rs-pricing-filter {
+    .nav-tabs {
+        gap: 24px;
+        li {
+            a {
+                color: $white-color;
+                font-size: 18px; 
+                font-weight: 700; 
+                font-family: $heading-font;
+                transition: $transition;
+                position: relative;
+                &::before {
+                    content: ''; 
+                    position: absolute; 
+                    left: 0; 
+                    bottom: -5px;
+                    width: 100%; 
+                    height: 2px; 
+                    background: $rs-yellow;
+                    opacity: 0; 
+                    transition: $transition;
+                }
+                &.active {
+                    color: $rs-yellow;
+                    &::before {
+                        bottom: -2px; 
+                        opacity: 1; 
+                    }
+                }
+            }
+        }
+    }
+}
+.rs-pricing-column {
+    .monthly-price {
+        color: $light-red;
+        span {
+            color: $heading-color;
+        }
+    }
+    .feature-list {
+        height: 250px;
+    }
+}
+
+/************ about section start ***************/ 
+.rs-about {
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center;
+}
+
+/*********** feature section start **********/ 
+.rs-feature {
+    .rs-doted {
+        left: 100px;
+        bottom: 33%;
+    }
+
+}
+.rs-rectangle-shape {
+    width: 378px; 
+    height: 113px;
+    background: linear-gradient(269.34deg, #FF0766 -124.14%, #F6F9FF 52.47%);
+    border-radius: 100px;
+    top: 150px;
+    transform: rotate(144deg);
+}
+
+/******** feedback section start **********/ 
+.rs-feedback {
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: top center;
+    margin-top: -15px;
+    @include medium-screen {
+        margin-top: -25px;
+    }
+}
+
+/********** award section start ***********/ 
+.rs-award-wrapper {
+    border-radius: 10px;
+    padding: 60px 25px;
+    margin-top: -30px;
+    .rs-award-thumb {
+        gap: 24px;
+    }
+}
+
+
+/************* Plans Table ***********/ 
+.rs-table {
+    table {
+        width: 100%;
+        th {
+            border: 1px solid $rs-border; 
+            background: $rs-bg;
+            color: $white-color;
+            padding: 24px 40px;
+            min-width: 220px;
+            &:first-child {
+                min-width: 280px; 
+            }
+            .h4 {
+                color: $white-color;
+                margin-bottom: 0;
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+                &.price {
+                    color: $rs-yellow;
+                    span {
+                        color: $white-color;
+                    }
+                }
+            }
+            span.plan-title {
+                font-family: $heading-font;
+                margin-bottom: 8px;
+                display: block;
+            }
+            .template-btn {
+                margin-top: 16px;
+            }
+        }
+    }
+    .accordion-item {
+        border: 0;
+        + .accordion-item {
+            margin-top: 16px;
+        }
+        .accordion-header {
+            a {
+                border: 0;
+                background: $white-color;
+                box-shadow: none;
+                font-weight: 700;
+                color: $heading-color;
+            }
+        }
+        .accordion-body {
+            padding: 0;
+        }
+    }
+}
+.rs-info-table {
+    td {
+        border: 1px solid $rs-table-border;
+        padding: 12px 24px;
+        background: $ds-bg;
+        min-width: 220px;
+        &:first-child {
+            min-width: 280px;
+        }
+        strong {
+            color: $light-red;
+        }
+    }
+}
+
+/******** call to action start ************/ 
+.rs-cta {
+    background: $overlay-bg;
+    .rs-cta-btns {
+        gap: 24px;
+    }
+}

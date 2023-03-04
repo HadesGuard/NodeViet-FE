@@ -1,0 +1,62 @@
+.services-status-list {
+    li {
+        border: 1px solid $border-color;
+        transition: all 0.2s ease-in;
+        border-bottom: 2px solid transparent;
+        .badge {
+            background-color: rgba($primary-color, 0.2);
+            color: $primary-color;
+        }
+    }
+    .status-location-heading {
+        width: 70%;
+        text-align: left;
+    }
+    .status-mode {
+        width: 30%;
+        text-align: right;
+    }
+}
+
+.timeline-item {
+    position: relative;
+    padding-right: .9375rem;
+    padding-left: 2rem;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 3.5rem;
+        bottom: 0;
+        left: 0;
+        height: auto;
+        border-left: 2px solid $border-color;
+    }
+}
+
+.timeline-item:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.timeline-icon.btn-sm {
+    font-size: 18px;
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.timeline-heading {
+    position: relative;
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    padding-bottom: .75rem;
+    margin-bottom: 1rem;
+    font-family: 'Open Sans', sans-serif;
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 2px solid $border-color;
+        content: "";
+    }
+}

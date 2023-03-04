@@ -1,0 +1,43 @@
+.nav-wrapper ul li.has-submenu ul{
+  right: 0;
+}
+
+.header-right > div + div {
+  margin-left: 0; 
+  margin-right: 20px;
+}
+.header-right div + div::before {
+  left: auto; 
+  right: -10px;
+}
+.nav-wrapper ul li.has-submenu ul {
+  text-align: right;
+}
+.header-search-form input {
+  border-radius: 0 4px 4px 0;
+}
+.header-search-form input[type=submit] {
+  border-radius: 4px 0 0 4px;
+}
+.header-style-4 .sh-header-btn::before {
+  left: auto; 
+  right: -20px;
+}
+.header-style-4 .sh-header-cart::before {
+  left: auto; 
+  right: -15px;
+}
+
+.footer-widget .widget-title::before {
+  right: 0; 
+  left: auto;
+}
+.footer-widget .ft-subtitle::after {
+  right: auto; 
+  left: -70px;
+}
+
+.footer-widget .social-nav li + li {
+  margin-right: 5px;
+  margin-left: 0;
+}

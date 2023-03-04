@@ -1,0 +1,70 @@
+// Responsive Breakpoint
+@mixin screen-480() {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+@mixin screen-460-to-370() {
+    @media (min-width: 370px) and (max-width: 460px) {
+        @content; 
+    }
+}
+@mixin portrait-phone() {
+    @media (max-width: 575.98px) {
+        @content;
+    }
+}
+@mixin landscape-phone() {
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        @content;
+    }
+}
+@mixin small-screen() {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin tablet() {
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        @content;
+    }
+}
+@mixin medium-screen() {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+@mixin desktop() {
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        @content;
+    }
+}
+@mixin large-screen() {
+    @media (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+@mixin screen-1400() {
+    @media (max-width: 1399.98px) {
+        @content;
+    }
+}
+@mixin screen-1440() {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin screen-1600() {
+    @media (max-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin screen-1800 {
+    @media (max-width: 1800px) {
+        @content; 
+    }
+}

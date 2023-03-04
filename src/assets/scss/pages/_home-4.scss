@@ -1,0 +1,334 @@
+/******* home 4 **********/
+.hero-4 {
+    background: $secondary-color;
+    padding: 215px 0 165px 0;
+    margin-top: -115px;
+    border-radius: 0 0 100px 0;
+    .hero4-circle {
+        width: 140px; 
+        height: 140px; 
+        background: $h4-shape-gradient;
+        left: 60%;
+        top: 30%;
+    }
+    .h4-hero-shape {
+        bottom: 115px; 
+        left: 106px;
+    }
+    .h4-hero-shape-2 {
+        right: 13%; 
+        top: 29%;
+    }
+}
+
+/********** apps section start *********/ 
+.h4-app-section {
+    margin-top: -60px;
+}
+.h4-apps-box {
+    padding: 45px 15px;
+    .icon-bg {
+        width: 60px; 
+        height: 60px;
+        i {
+            font-size: 30px;
+            color: $heading-color;
+            &.fa-magento {
+                color: $magento;
+            }
+            &.fa-wordpress {
+                color: $wordpress;
+            }
+            &.fa-joomla {
+                color: $zoomla;
+            }
+            &.fa-drupal {
+                color: $drupal;
+            }
+        }
+        &.orange-light {
+            background: $orange-light;
+        }
+         &.light-blue {
+            background: $light-blue;
+         }
+    }
+    h6 {
+        font-size: 16px;
+    }
+}
+.h4-hero-form {
+    padding: 45px 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 48px;
+    z-index: 2;
+    form {
+        overflow: hidden;
+        input {
+            padding: 14px 16px;
+            display: block;
+            width: 100%;
+            border: 1px solid $h4-border-color;
+            font-weight: 600;
+            border-radius: 3px;
+            margin-bottom: 16px;
+            &::placeholder {
+                color: $h4-placeholder;
+            }
+        }
+        input[type="submit"] {
+            background: $light-red;
+            color: $white-color; 
+            border-color: $light-red;
+            margin-top: 40px;
+            transition: $transition;
+            &:hover {
+                background: $danger-text;
+            }
+        }
+        .social-signup {
+            gap: 16px;
+            .social-btn {
+                padding: 14px 35px;
+                border: 1px solid $h4-border-color;
+                display: inline-block;
+                border-radius: 4px;
+                color: $heading-color;
+                font-weight: 600;
+                transition: $transition;
+                .google {
+                    color: $google-plus;
+                }
+                .facebook {
+                    color: $facebook;
+                }
+                &:hover {
+                    background: $light-bg;
+                }
+            }
+        }
+    }
+    @include screen-1400 {
+        form {
+            .social-signup {
+                .social-btn {
+                    padding: 12px 25px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    @include large-screen {
+        position: relative;
+    }
+}
+
+/******** hosting product start *******/
+
+.hosting-signle-product {
+    padding: 40px 20px;
+    .pricing-amount {
+        & > span {
+            font-size: 14px;
+            color: $heading-color;
+            font-weight: 600;
+        }
+        h3 {
+            color: $light-red;
+            span {
+                font-size: 16px;
+                color: $heading-color;
+                font-weight: 400;
+            }
+        }
+    }
+    p {
+        font-size: 14px;
+    }
+}
+.hosting-info {
+    .frame-shape {
+        bottom: -50px;
+        left: -50px;
+        transform: rotate(45deg);
+    }
+}
+.hosting-info-title {
+    mark {
+        color: $primary-color;
+    }
+}
+.hosting-info-column {
+    box-shadow: $h4-box-shadow;
+    padding: 40px 24px;
+    .hostim-info-list {
+        li {
+            span {
+                width: 12px; 
+                height: 12px;
+                background: $heading-color;
+                color: $white-color; 
+                font-size: 8px;
+            }
+            + li {
+                margin-top: 6px;
+            }
+        }
+    }
+}
+
+/*********** about section start ***********/ 
+.home4-about-right {
+    .title-area {
+        p {
+            max-width: 450px;
+        }
+    }
+}
+.home4-about-accordion {
+    .accordion-item {
+        .accordion-header {
+            a {
+                color: $heading-color;
+                position: relative;
+                &::before {
+                    content: '\2b';
+                    font-family: 'FontAwesome';
+                    width: 30px; 
+                    height: 30px;
+                    background: $white-color;
+                    display: inline-flex;
+                    align-items: center; 
+                    justify-content: center;
+                    border-radius: 50%;
+                    margin-right: 15px; 
+                    color: $primary-color;
+                    font-weight: 700;
+                    font-size: 15px;
+                }
+                &:not(.collapsed) {
+                    &::before {
+                        content: '\f068';
+                        background: $primary-gradient;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        .accordion-body {
+            padding-left: 0;
+            padding-bottom: 0;
+            p {
+                margin-bottom: 0;
+            }
+        }
+        + .accordion-item {
+            margin-top: 24px;
+        }
+    }
+}
+
+/************* feature section start **************/ 
+.h4-feature-wrapper {
+    padding: 70px 60px 70px 60px;
+    box-shadow: $h4-box-shadow;
+    border-radius: 6px;
+    @include portrait-phone {
+        padding: 50px 30px;
+    }
+}
+.h4-feature-item {
+    .icon-wrapper {
+        span {
+            width: 38px; 
+            height: 38px;
+            background: $light-blue;
+            bottom: -6px;
+            right: -20px;
+        }
+    }
+}
+
+
+/*********** feedback section start ***********/ 
+.h4-feedback-award {
+    gap: 24px; 
+    @include portrait-phone {
+        gap: 6px;
+    }
+}
+
+.h4-feedback-single {
+    padding: 40px 24px 36px;
+    box-shadow: $h4-box-shadow;
+}
+
+/********** call to action start ***********/ 
+.home4-cta-wrapper {
+    padding: 0 50px 0;
+    .cta-right-shape {
+        right: -50px; 
+        bottom: -70px;
+        opacity: 0.6;
+    }
+    @include medium-screen {
+        padding: 40px 30px 0 30px;
+    }
+}
+.cta-left {
+    .home4-shape-large {
+        width: 290px; 
+        height: 290px; 
+        background: $h4-shape-large;
+        bottom: 0; 
+        left: 15px;
+    }
+}
+
+
+/*********** blog section start***********/ 
+.h4-blog-card {
+    overflow: hidden;
+    .feature-img {
+        img {
+            transition: $transition;
+        }
+    }
+    .category-btn {
+        padding: 8px 24px;
+        background: $light-red;
+        font-size: 14px; 
+        color: $white-color;
+        border-radius: 5px 0 5px 0;
+    }
+    .h4-blog-content {
+        padding: 30px 20px;
+        max-width: 550px;
+        border-radius: 0 5px 0 5px;
+        position: absolute;
+        left: 0; 
+        bottom: 0;
+        h3 {
+            transition: $transition; 
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    &:hover {
+        .feature-img {
+            img {
+                transform: scale(1.01);
+            }
+        }
+    }
+    @include portrait-phone {
+        max-width: 500px; 
+        margin-left: auto; 
+        margin-right: auto;
+        .h4-blog-content {
+            position: relative;
+        }
+    }
+}

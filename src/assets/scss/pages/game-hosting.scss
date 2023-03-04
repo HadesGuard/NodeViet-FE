@@ -1,0 +1,397 @@
+/********** game hosting **********/ 
+.gh-heading {
+    color: $gh-heading-color;
+}
+.gh-text {
+    color: $gh-text-color;
+}
+.gh-section-overlay {
+    position: relative; 
+    z-index: 1;
+    &::before {
+        content: ''; 
+        position: absolute; 
+        left: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: $gh-overlay;
+        z-index: -1;
+    }
+}
+.gh-bg {
+    background: $gh-bg;
+}
+.gh-content-bg {
+    background: $gh-content-bg;
+}
+
+/******* hero section start **********/ 
+.gh-hero-section {
+    padding: 80px 0 134px 0;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.gh-hero-btns {
+    gap: 24px;
+}
+.gh-hero-right {
+    .gh-hero-box-circle {
+        position: absolute; 
+        left: -85px; 
+        bottom: -45px;
+        width: 30px; 
+        height: 30px; 
+        background: $gh-primary-gradient;
+        border-radius: 50%;
+        z-index: -1;
+        @include medium-screen {
+            left: -15px;
+            bottom: -15px;
+        }
+    }
+}
+.gh-hero-box {
+    position: absolute;
+    max-width: 360px;
+    left: -70px; 
+    bottom: -30px;
+    border-radius: 15px;
+    padding: 25px 20px;
+    background: $light-white;
+    backdrop-filter: blur(20px);
+    z-index: 1;
+    p {
+        color: $gh-paragraph;
+    }
+    .gh-hero-box-border {
+        position: absolute;
+        left: 0; 
+        top: 0;
+        z-index: -1;
+        width: 100%; 
+        height: 100%;
+        padding: 1px;
+        border-radius: 10px;
+        background: linear-gradient(to right, #FF004A 0%, #ffffff84 100%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+    }
+    @include medium-screen {
+        bottom: 0; 
+        left: 0;
+    }
+    @include portrait-phone {
+        position: relative;
+        margin-top: 30px;
+    }
+}
+
+/************ game server start *********/ 
+.gh-filter-top {
+    position: relative; 
+    &::before {
+        content: ''; 
+        position: absolute; 
+        left: 0; 
+        width: 100%; 
+        height: 2px; 
+        background: $gh-border-color;
+        bottom: 12px;
+    }
+    @include medium-screen {
+        &::before {
+            display: none;
+        }
+    }
+}
+.gh-filter-search {
+    form {
+        transform: translateY(-10px);
+        max-width: 200px;
+        display: flex; 
+        align-items: center;
+        overflow: hidden;
+        button {
+            background: transparent; 
+            border: 0; 
+            color: $white-color;
+        }
+        input {
+            background: transparent;
+            border: 0;
+            color: $gh-text-color;
+        }
+    }
+    @include medium-screen {
+        margin-top: 32px;
+        form {
+            max-width: 400px;
+        }
+    }
+}
+.gh-filter-controls {
+    button {
+        background: transparent;
+        color: $gh-heading-color;
+        font-weight: 600;
+        border: 0;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        position: relative; 
+        &::before {
+            content: ''; 
+            position: absolute; 
+            left: 0; 
+            width: 0; 
+            height: 2px;
+            background: $light-red;
+            bottom: -8px;
+            transition: $transition;
+        }
+        sup {
+            color: $white-color;
+            transition: $transition;
+        }
+        &.active {
+            &::before {
+                width: 100%;
+            }
+            sup {
+                color: $light-red;
+            }
+        }
+    }
+}
+.gh-single-game {
+    img {
+        transition: $transition;
+    }
+    .supported-operators {
+        right: 15px;
+        top: 15px;
+        a {
+            width: 30px;
+            height: 30px; 
+            background: $gh-icon-bg;
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: 50%;
+            color: $white-color;
+            font-size: 12px;
+        }
+    }
+    .gh-single-game-content {
+        width: 100%;
+        text-align: center; 
+        padding: 30px 15px;
+        left: 0; 
+        bottom: -20px;
+        opacity: 0; 
+        visibility: hidden;
+        background: $gh-light-black; 
+        backdrop-filter: blur(20px);
+        transition: $transition;
+    }
+    &:hover {
+        img {
+            transform: scaleX(1.05);
+        }
+        .gh-single-game-content {
+            visibility: visible;
+            opacity: 1;
+            bottom: 0;
+        }
+    }
+}
+
+/************* about section start ************/ 
+.gh-about-item {
+    padding: 40px 24px;
+    border-radius: 8px;
+}
+
+/***************** feature section start **********/ 
+.gh-feature {
+    .gh-comet-shape {
+        width: 134px; 
+        height: 41px;
+        background: linear-gradient(269.47deg, rgba(255, 7, 102, 0.5) -36.16%, rgba(20, 22, 29, 0.5) 61.88%);
+        border-radius: 100px;
+        transform: rotate(144deg);
+        right: 150px;
+        top: 80px;
+    }
+}
+.gh-feature-list {
+    li {
+        color: $gh-list-color;
+        font-weight: 600;
+        + li {
+            margin-top: 16px;
+        }
+        span {
+            width: 15px; 
+            height: 15px; 
+            background: $light-red;
+            color: $white-color; 
+            border-radius: 50%;
+            font-size: 8px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+.gh-video-content {
+    .gh-video-circle {
+        width: 60px; 
+        height: 60px; 
+        background: linear-gradient(180deg, #FF0766 0%, rgba(20, 22, 29, 0) 100%);
+        left: -30px; 
+        bottom: -30px;
+        border-radius: 50%; 
+    }
+}
+.gh-video-popup {
+    width: 60px; 
+    height: 60px; 
+    background: $light-red;
+    color: $white-color;
+    transition: $transition;
+    &::before {
+        content: ''; 
+        position: absolute; 
+        left: -8px;
+        top: -8px;
+        width: 76px; 
+        height: 76px;
+        background: transparent; 
+        border: 1px solid $light-red;
+        border-radius: 50%; 
+    }
+    &:hover {
+        color: $white-color;
+        transform: translate(-50%, -60%) !important;
+    }
+}
+
+
+/***************** counter section start ***********/ 
+.gh-counter-section {
+    background: $gh-counter-bg;
+    .gh-counter-bg-shape {
+        background-repeat: no-repeat; 
+        background-position: right bottom;
+        width: 100%;
+    }
+    .gh-counter-top {
+        max-width: 545px;
+    }
+}
+.gh-counter-items {
+    gap: 24px;
+}
+
+/************ faq section start ***************/ 
+.gh-faq-accordion {
+    background: transparent;
+    padding: 0;
+    .accordion-item {
+        background: transparent;
+        border: 1px solid $gh-border-color;
+        padding: 20px 15px 20px 20px;
+        border-radius: 4px;
+        + .accordion-item {
+            margin-top: 24px;
+        }
+        &:last-child {
+            padding-bottom: 20px; 
+            border-bottom: 1px solid $gh-border-color;
+        }
+        .accordion-header {
+            a {
+                color: $gh-heading-color;
+                &::after {
+                    border: 0;
+                }
+            }
+        }
+        .accordion-body {
+            p {
+                color: $gh-heading-color;
+            }
+        }
+    }
+}
+
+
+/************* feedback section start *****************/ 
+.gh-feedback {
+    padding: 120px 0 380px 0;
+    .gh-feedback-bg {
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: top center;
+    }
+    @include small-screen {
+        padding: 65px 0 350px 0;
+    }
+}
+.gh-feedback-item {
+    background: $gh-feedback-bg;
+}
+
+/************* map area start **************/ 
+.gh-maps {
+    margin-top: -150px;
+    @include small-screen {
+        margin-top: -170px;
+    }
+    @include portrait-phone {
+        margin-top: -185px;
+    }
+}
+.gh-map-bottom {
+    .gh-location-indicator {
+        background: transparent;
+        color: $light-red;
+        font-size: 30px;
+        border: 0;
+        &:nth-of-type(1) {
+            left: 12%;
+            top: 13%;
+        }
+        &:nth-of-type(2) {
+            bottom: 20%;
+            left: 30%;
+        }
+        &:nth-of-type(3) {
+            top: 16%;
+            left: 50%;
+        }
+        &:nth-of-type(4) {
+            bottom: 25%;
+            left: 54%;
+        }
+        &:nth-of-type(5) {
+            bottom: 15%;
+            right: 10%;
+        }
+        &:nth-of-type(6) {
+            top: 18%;
+            left: 80%;
+        }
+    }
+}
+
+/************** call to action start ***********/ 
+.gh-cta-btns {
+    gap: 24px;
+    @include portrait-phone {
+        gap: 16px;
+    }
+}

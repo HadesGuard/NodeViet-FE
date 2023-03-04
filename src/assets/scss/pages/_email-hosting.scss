@@ -1,0 +1,210 @@
+.email-hero {
+    padding: 100px 0 240px 0;
+} 
+
+/************* pricing section start ****************/ 
+.email-pricing {
+    margin-top: -120px;
+    .rs-pricing-column {
+        transition: $transition; 
+        &:hover {
+            box-shadow: $h5-box-shadow;
+        }
+    }
+}
+
+/************* email services ***************/ 
+.email-services-wrapper {
+    .em-host-arrow-lg {
+        top: -30px;
+        left: calc(50% + 10px); 
+        transform: translateX(-50%); 
+    }
+}
+.email-service-item {
+    .icon-wrapper {
+        width: 70px; 
+        height: 70px;
+        position: relative;
+        z-index: 1;
+        &::before {
+            content: ''; 
+            position: absolute; 
+            left: 10px; 
+            bottom: -10px; 
+            width: 50px; 
+            height: 50px; 
+            opacity: 0.6; 
+            border-radius: 50%; 
+            filter: blur(20px);
+            z-index: -1;
+        }
+        &.bg-light-red {
+            background: $light-red;
+            &::before {
+                background: $light-red; 
+            }
+        }
+        &.bg-warning {
+            &::before {
+                background: rgb(255,193,7); 
+            }
+        }
+        &.info-bg {
+            background: $info-bg; 
+            &::before {
+                background: $info-bg;
+            }
+        }
+    }
+    &.mt-100 {
+        @include screen-1400 {
+            margin-top: 0;
+        }
+    }
+}
+
+/************** email feature section start ****************/ 
+.email-feature {
+    .overlay-bg {
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+}
+.email-feature-item {
+    .icon-wrapper {
+        width: 70px; 
+        height: 70px;
+        box-shadow: $h5-box-shadow;
+    }
+}
+
+/*************** about section start ************/ 
+.em-explore-btn {
+    color: $heading-color;
+    transition: $transition; 
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+/************ call to action start **************/ 
+.email-cta-wrapper {
+    padding: 70px 24px;
+    .rectangle-shape {
+        right: 60px; 
+        top: 40px;
+    }
+    .curve-shape {
+        right: 100px;
+    }
+}
+
+
+/************** pricing slider area ***************/ 
+.em-pricing-single-item {
+    padding: 40px 32px;
+}
+
+.em-pricing-slider-wrapper {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+.em-pricing-slider {
+    padding: 40px 0 60px 0;
+    margin: 0 -15px;
+    .swiper-slide {
+        transform: scale(0.9);
+    }
+    .swiper-slide-active {
+        transform: scale(1);
+        box-shadow: $h5-box-shadow;
+        position: relative; 
+        z-index: 10;
+        .em-pricing-btn {
+            color: $white-color;
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+    .swiper-pagination {
+        .swiper-pagination-bullet {
+            border: 1px solid transparent;
+            background: transparent;
+            width: 15px; 
+            height: 15px;
+            opacity: 1;
+            position: relative; 
+            &::before {
+                content: ''; 
+                position: absolute;
+                left: 50%; 
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 8px; 
+                height: 8px; 
+                background: $secondary-color;
+                border-radius: 50%; 
+            }
+            &.swiper-pagination-bullet-active {
+                border: 1px solid $primary-color;
+                &::before {
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+    @include medium-screen {
+        margin: 0;
+        .swiper-slide {
+            transform: scale(1);
+        }
+        .swiper-slide-active {
+            box-shadow: none;
+        }
+    }
+}
+.em-pricing-single-item {
+    transition: $transition;
+    .list-items {
+        li {
+            font-size: 15px;
+            + li {
+                margin-top: 8px;
+            }
+            span {
+                color: $success-text;
+            }
+        }
+    }
+    .em-pricing-btn {
+        color: $white-color;
+        transition: $transition;
+        padding: 12px 24px;
+        display: inline-block;
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        margin-top: 16px;
+        background: $primary-gradient;
+        &::before {
+            content: ''; 
+            position: absolute; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: $primary-hover-gradient;
+            z-index: -1;
+            opacity: 0;
+            transition: $transition;
+        }
+        &:hover {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,419 @@
+.footer {
+    background-color: $secondary-color;
+    .brands-area {
+        margin-bottom: 120px;
+        &.mt--100 {
+            margin-top: -120px;
+        }
+    }
+}
+.footer-widget {
+    margin-bottom: 60px;
+    .ft-subtitle {
+        &::after {
+            content: ''; 
+            position: absolute;
+            right: -70px; 
+            bottom: 5px;
+            width: 60px; 
+            height: 2px; 
+            background: $primary-gradient;
+        }
+    }
+    .ft-payment-method {
+        .payment-list {
+            li {
+                background-color: #25326F;
+                width: 82px; 
+                height: 50px;
+                border-radius: 4px;
+                margin-right: 8px;
+            }
+        }
+    }
+    .widget-title {
+        &::before {
+            content: ''; 
+            position: absolute; 
+            left: 0; 
+            bottom: -15px; 
+            width: 50px;
+            height: 3px; 
+            background: $primary-gradient;
+
+        }
+    }
+    .footer-nav {
+        li {
+            a {
+                transition: $transition; 
+                position: relative; 
+                color: $white-color; 
+                font-size: 15px;
+                &::before {
+                    content: '//'; 
+                    position: absolute; 
+                    left: 0; 
+                    top: 0; 
+                    color: $white-color;
+                    opacity: 0; 
+                    transition: $transition; 
+                }
+                &:hover {
+                    padding-left: 15px;
+                    color: $primary-color;
+                    &::before {
+                        opacity: 1; 
+                        color: $primary-color; 
+                    }
+                }
+            }
+            + li {
+                margin-top: 12px;
+            }
+        }
+    }
+    .footer-sb-form {
+        input[type="email"] {
+            width: 100%; 
+            padding: 20px 100px 20px 20px;
+            background-color: #293571; 
+            border-radius: 5px;
+            border: 0; 
+            color: $white-color; 
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+        button {
+            position: absolute; 
+            right: 10px; 
+            top: 50%; 
+            transform: translateY(-50%);
+            border: 0;
+        }
+    }
+    .social-nav {
+        li {
+            display: inline-block;
+            + li {
+                margin-left: 5px;
+            }
+            a {
+                width: 40px; 
+                height: 40px; 
+                background: $primary-gradient; 
+                z-index: 1; 
+                &::before {
+                    content: ''; 
+                    position: absolute; 
+                    left: 0; 
+                    width: 100%; 
+                    top: 0; 
+                    height: 100%; 
+                    background: $primary-hover-gradient; 
+                    z-index: -1; 
+                    transition: $transition; 
+                    opacity: 0; 
+                }
+                &:hover {
+                    &::before {
+                        opacity: 1;
+                    }
+                }                
+            }
+        }
+    }
+    
+}
+.footer-copyright {
+    padding: 15px 0;
+    background-color: #00175F;
+    p {
+        font-size: 14px;
+    }
+    .copyright-links {
+        a {
+            transition: $transition; 
+            color: $white-color;
+            font-size: 14px; 
+            &:hover {
+                color: $primary-color;
+            }
+            + a {
+                position: relative; 
+                &::before {
+                    content: ''; 
+                    position: absolute; 
+                    left: -12px; 
+                    top: 0; 
+                    width: 1px; 
+                    height: 25px;
+                    background-color: #002496;
+                }
+            }
+        }
+    }
+}
+
+
+
+/*********** Footer Style 2 **************/ 
+.hm2-footer {
+    background: $heading-color;
+    background-repeat: no-repeat; 
+    background-size: 1000px; 
+    background-position: center;
+    &.mt--150 {
+        margin-top: -150px;
+    }
+    @include medium-screen {
+        background-size: auto;
+        background-position: center center;
+    }
+}
+.hm2-sb-area {
+    padding: 60px 30px;
+    border-radius: 10px;
+    position: relative; 
+    z-index: 9;
+    .sb-circle {
+        left: 100px; 
+        bottom: 50px;
+    }
+    @include medium-screen {
+        .sb-circle {
+            display: none; 
+        }
+    }
+}
+.hm2-sb-form {
+    width: 100%;
+    .radio-btns {
+        .btns-wrapper {
+            display: inline-block;
+        }
+        label {
+            color: $white-color;
+            margin-right: 20px; 
+            position: relative; 
+            cursor: pointer;
+            span {
+                width: 16px; 
+                height: 16px; 
+                border: 1px solid $white-color;
+                display: inline-block;
+                position: absolute;
+                left: -25px;
+                top: 4px;
+                border-radius: 50%;
+                &::before {
+                    content: ''; 
+                    width: 8px; 
+                    height: 8px; 
+                    background: transparent;
+                    position: absolute; 
+                    left: 50%; 
+                    top: 50%; 
+                    transform: translate(-50%, -50%);
+                    border-radius: 50%;
+                }
+            }
+        }
+        input {
+            opacity: 0;
+            &:checked {
+                ~ label {
+                    span {
+                        &::before {
+                            background: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .form-input {
+        input {
+            width: 100%;
+            padding: 15px 50px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.399);
+            background: transparent;
+            font-weight: 500;
+            color: $white-color;
+            &::placeholder {
+                color: rgba(255, 255, 255, 0.3);
+            }
+        }
+        label {
+            position: absolute; 
+            left: 20px;
+            top: 17px;
+            color: rgba(255, 255, 255, 0.3);
+            font-weight: 500;
+        }
+        .template-btn {
+            position: absolute;
+            right: 0; 
+            top: 0;
+            border: 0;
+            border-radius: 0 30px 30px 0;
+        }
+
+    }
+    @include portrait-phone {
+        .form-input {
+            .template-btn {
+                position: relative;
+                border-radius: 30px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.hm2-footer-copyright {
+    border-top: 1px solid rgba(231, 231, 231, 0.11);
+    padding: 10px 0;
+    .footer-social {
+        a {
+            width: 45px; 
+            height: 45px;
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center;
+            border-radius: 50%; 
+            background: rgba(255,255,255,0.2); 
+            position: relative; 
+            color: $white-color; 
+            overflow: hidden;
+            z-index: 1; 
+            &::before {
+                content: ''; 
+                position: absolute; 
+                left: 0; 
+                width: 100%; 
+                height: 100%; 
+                top: 0; 
+                background: $primary-gradient; 
+                z-index: -1; 
+                opacity: 0; 
+                transition: $transition; 
+            }
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+            }
+            + a {
+                margin-left: 5px;
+            }
+        }
+    }
+}
+
+
+/************* Footer Style 3 ****************/ 
+.footer {
+    &.dark-bg {
+        .footer-widget {
+            .widget-title {
+                &::before {
+                    background: $gm-primary-gradient;
+                }
+            }
+            .social-nav {
+                li {
+                    a {
+                        background: $gm-primary-gradient; 
+                        &::before {
+                            background: $gm-primary-hover-gradient;
+                        }
+                    }
+                }
+            }
+            .footer-sb-form {
+                input[type="email"] {
+                    background-color: rgba(255,255,255,0.06);
+                }
+            }
+            .ft-payment-method {
+                .payment-list {
+                    li {
+                        background-color: rgba(255,255,255,0.06);
+                    }
+                }
+            }
+        }
+        .footer-copyright {
+            background-color: rgba(255,255,255,0.05);
+            .copyright-links {
+                a {
+                    + a {
+                        &::before {
+                            background-color: $gm-primary-color;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*********** h5 footer **********/ 
+.h5-footer {
+    background: $secondary-color;
+    padding: 210px 0 0 0;
+    .h5-footer-circle-shape {
+        width: 312px; 
+        height: 312px; 
+        background: $h5-circle-gradient;
+        border-radius: 50%;
+        right: 0;
+        bottom: 60px;
+        opacity: 0.5;
+    }
+    @include small-screen {
+        padding-top: 70px;
+    }
+}
+.h5-footer-address {
+    li {
+        i {
+            font-size: 18px; 
+            color: $primary-color;
+        }
+        + li {
+            margin-top: 24px;
+        }
+    }
+}
+
+/**************** footer light *************/ 
+.footer-light {
+    .footer-widget {
+        .footer-nav {
+            li {
+                a {
+                    color: $mn-text-color;
+                    transition: $transition; 
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        .footer-sb-form {
+            border: 1px solid $mn-border-color;
+            input[type="email"] {
+                background-color: $white-color;
+                &::placeholder {
+                    color: $mn-border-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,295 @@
+/**************** black friday ************/ 
+.black-friday-header {
+    background:  transparent;
+    position: relative; 
+    z-index: 10;
+    &.sticky-header {
+        background: $dark-bg;
+    }
+    .sh-header-cart {
+        button {
+            .number {
+                background: $light-red;
+            }
+        }
+    }
+    .sh-header-btn {
+        .primary-btn {
+            background: $light-red; 
+        }
+    }
+    .nav-menu-4 ul li .submenu-wrapper {
+        background: $dark-bg !important;
+    }
+    .nav-wrapper ul li.has-submenu .submenu-wrapper li .menu-list-wrapper .icon-wrapper, 
+    .nav-wrapper ul li.has-submenu .submenu-wrapper .megamenu-item .menu-list-wrapper .icon-wrapper {
+        background: $light-red;
+    }
+}
+
+/************* friday-hero ************/ 
+.friday-hero {
+    background: $black-bg;
+    padding: 180px 0;
+    margin-top: -80px;
+    .bf-line-left {
+        bottom: 200px; 
+        left: 50px;
+    }
+    .gift-box-right {
+        top: 200px; 
+        right: 30px;
+    }
+    .bf-line-top {
+        right: 80px; 
+        top: 80px;
+    }
+    .gift-box-sm {
+        bottom: 85px;
+    }
+    .dots-shape-white {
+        left: 40%; 
+        bottom: 100px;
+    }
+    .primary-btn {
+        background: $light-red;
+    }
+}
+.sp-downcount-timer {
+    gap: 16px;
+    li {
+        text-align: center;
+        .box {
+            min-width: 70px;
+            padding: 12px 8px;
+            background: $white-color; 
+            border-radius: 4px;
+            color: $heading-color;
+            display: inline-block;
+            font-size: 24px; 
+            font-family: $heading-font; 
+            font-weight: 700;
+        }
+        .subtitle {
+            display: block;
+            margin-top: 4px;
+            color: $white-color;
+        }
+    }
+}
+.friday-offer-packages {
+    @include medium-screen {
+        margin-top: 60px;
+    }
+}
+.friday-hosting-offer {
+    background: $package-bg;
+    padding: 40px 16px 26px;
+    text-align: center;
+    .title-badge {
+        background: $white-color;
+        padding: 4px 24px;
+        min-width: 200px;
+        position: absolute; 
+        left: 50%; 
+        top: -15px; 
+        transform: translateX(-50%);
+        clip-path: polygon(100% 0, 94% 50%, 100% 100%, 0% 100%, 6% 50%, 0% 0%);
+        font-size: 18px;
+        font-weight: 700;
+        color: $heading-color;
+        z-index: 2;
+    }
+    .angle-shape {
+        width: 60px; 
+        height: 30px;
+        background: $white-color; 
+        position: absolute;
+        top: 0;
+        left: 50%; 
+        transform: translateX(-50%);
+        z-index: 1;
+        clip-path: polygon(100% 0, 0 0, 50% 100%);
+    }
+    .sale-price {
+        color: $white-color;
+        font-family: $heading-font;
+        font-weight: 700;
+        display: inline-block; 
+        position: relative; 
+        &::before {
+            content: ''; 
+            position: absolute; 
+            left: -6px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            width: calc(100% + 12px);
+            height: 1.5px; 
+            background: $light-red;
+        }
+    }
+    .price {
+        color: $white-color;
+        span {
+            font-size: 12px;
+        }
+    }
+    .primary-btn {
+        background: $primary-gradient;
+    }
+}
+
+
+/************** brand slider **************/ 
+.bf-brand-slider-area {
+    margin-top: -60px;
+    .bf-brand-slider-wrapper {
+        padding: 60px 40px;
+        border-radius: 10px;
+        box-shadow: $h5-box-shadow;
+        position: relative; 
+        z-index: 10;
+        .brand-thumb {
+            text-align: center;
+            padding: 0 25px;
+        }
+    }
+}
+
+
+
+/*********** black friday pricing ***********/ 
+.bf-pricing-column {
+    padding: 40px 24px;
+}
+.bf-pricing-btn-meta {
+    background: rgba($primary-color, 0.05);
+    color: $primary-color;
+    font-size: 12px; 
+}
+
+.bf-pricing-column { 
+    .currency-sign {
+        font-size: 40px; 
+        font-weight: 700;
+        color: $heading-color;
+        line-height: 1em;
+        transform: translateY(10px);
+    }
+    .price-title {
+        font-size: 90px;
+        font-weight: 700; 
+        color: $heading-color;
+        font-family: $heading-font;
+        line-height: 1em;
+        position: relative;
+        sup {
+            font-size: 22px;
+            position: absolute;
+            top: 20px;
+        }
+        sub {
+            font-size: 16px;
+            color: $paragraph-color;
+            position: absolute;
+            bottom: 20px;
+        }
+    }
+    .template-btn {
+        min-width: 200px;
+    }
+    .pricing-list {
+        li {
+            + li {
+                margin-top: 10px;
+            }
+        }
+    }
+    &.popular {
+        box-shadow: $h5-box-shadow;
+        z-index: 2;
+        border: 3px solid $light-red;
+        .popular-badge {
+            background: $light-red; 
+            padding: 8px 35px;
+            color: $white-color; 
+            font-family: $heading-font; 
+            font-weight: 700; 
+            font-size: 14px;
+            position: absolute; 
+            top: -38px;
+            left: 50%; 
+            transform: translateX(-50%);
+            &::before {
+                content: ''; 
+                position: absolute; 
+                left: 50%;
+                transform: translateX(-50%); 
+                bottom: -12px; 
+                width: 30px; 
+                height: 15px; 
+                background: $light-red; 
+                clip-path: polygon(100% 0, 0 0, 50% 100%);
+            }
+        }
+    }
+}
+
+/************* domain box ***************/
+.bf-domain-box {
+    .h5-domain-box {
+        margin-top: 0;
+    }
+}
+
+/**************** services section start *************/ 
+.friday-services {
+    &.mt--140 {
+        margin-top: -120px;
+        padding-top: 240px;
+        @include small-screen {
+            padding-top: 185px;
+        }
+    }
+}
+
+
+/************************ black friday ****************/ 
+.black-cta {
+    background: $black-bg;
+    .line-shape {
+        left: 125px; 
+        bottom: 40px;
+    }
+    .primary-btn {
+        background: $light-red;
+    }
+}
+
+/*************** control panel ***************/ 
+.fd-content-list {
+    .fd-list-item {
+        + .fd-list-item {
+            margin-top: 32px;
+        } 
+        @include medium-screen {
+            max-width: 500px;
+            margin-left: auto; 
+            margin-right: auto;
+            text-align: center;
+        }
+    }
+}
+.control-dashboard {
+    .gradient-shape {
+        width: 150px; 
+        height: 150px;
+        background: $circle-shape-gradient;
+        right: -20px;
+        top: -60px;
+    }
+    .dot-shape {
+        bottom: -45px; 
+        right: -25px;
+    }
+}

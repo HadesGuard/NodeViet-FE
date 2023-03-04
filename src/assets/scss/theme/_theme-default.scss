@@ -1,0 +1,85 @@
+body {
+    background-color: $light-bg;
+}
+.body-overlay {
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.7);
+    z-index: 100; 
+    opacity: 0; 
+    visibility: hidden;
+    transition: $transition;
+    &.overlay-on {
+        opacity: 1; 
+        visibility: visible;
+    }
+}
+.dark-light-switcher {
+    position: fixed;
+    right: 10px; 
+    top: 25%;
+    z-index: 1000;
+    border: 0; 
+    background: $dark-bg;
+    color: $white-color;
+    width: 40px;
+    height: 30px;
+    word-wrap: nowrap;
+    border-radius: 2;
+    .light-sun {
+        display: none;
+    }
+    &.active {
+        background: $white-color;
+        span, i {
+            color: $dark-bg;
+        }
+        .dark-moon {
+            display: none;
+        }
+        .light-sun {
+            display: block;
+        }
+    }
+}
+.logo-white {
+    display: none;
+}
+.logo-black {
+    display: block;
+}
+.bg-primary-gradient {
+    background: $section-gradient; 
+    h1,h2,h3,h4,p,button {
+        color: $white-color;
+    }
+}
+.bg-secondary-gradient {
+    background: $secondary-gradient;
+    h2 {
+        color: $white-color;
+    }
+    h4,p,span {
+        color: $white-color;
+    }
+}
+.header-gradient {
+    background: linear-gradient(269.94deg, #011788 10.47%, #00126B 99.97%);
+}
+.light-bg {
+    background-color: $light-bg;
+}
+.ds-bg {
+    background: $ds-bg;
+}
+
+.spacer {
+    background: #ddc5c5;
+}
+
+.zindex--1 {
+    z-index: -1;
+}

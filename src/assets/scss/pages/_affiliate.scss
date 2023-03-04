@@ -1,0 +1,62 @@
+.hm-affiliate-hero-left {
+    .lead {
+        color: $warning-text; 
+        display: inline-block;
+        font-size: 24px;
+        &::after {
+            content: '';
+            position: absolute; 
+            left: calc(100% + 10px);
+            bottom: 4px; 
+            width: 120px; 
+            height: 3px; 
+            background: $warning-text;
+        }
+    }
+}
+
+/*************** service section start ****************/ 
+.hm-aff-service-top {
+    margin-top: -60px;
+    .row {
+        &.g-70 {
+            --bs-gutter-x: 70px; 
+            --bs-gutter-y: 70px;
+            @include screen-1400 {
+                --bs-gutter-x: 24px; 
+                --bs-gutter-y: 24px;
+            }
+        }
+    }
+}
+.hm-aff-service-content {
+    .arrow-shape {
+        right: -50px; 
+        top: 0;
+    }
+}
+
+/********************* affiliate pricing plan *****************/ 
+.affiliate-plans {
+    padding-bottom: 280px;
+    @include small-screen {
+        padding-bottom: 220px;
+    }
+}
+.aff-pricing-table {
+    .accordion-item {
+        .accordion-header {
+            a {
+                background: $light-bg;
+            }
+        }
+    }
+}
+
+/************** affiliate feature section ********************/ 
+.aff-service-item {
+    padding: 40px 24px;
+}
+.aff-ft-support {
+    margin-top: -160px;
+}

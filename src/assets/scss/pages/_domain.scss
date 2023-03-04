@@ -1,0 +1,279 @@
+.dm-hero-section {
+    background: linear-gradient(279.3deg, #001DAC 2.98%, #000F57 98.6%);
+    .dm-hero-circle {
+        width: 60px; 
+        height: 60px; 
+        background: linear-gradient(180deg, rgba(28, 64, 242, 0.5) 0%, rgba(0, 43, 255, 0) 100%);
+        border-radius: 50%;
+        left: 145px;
+        top: 40%;
+        z-index: -1;
+
+    }
+    h1 {
+        color: $white-color; 
+        font-size: 56px;
+        @include screen-1400 {
+            font-size: 3rem;
+        }
+        @include large-screen {
+            font-size: calc(2.8rem + 0.1vw);
+        }
+        @include portrait-phone {
+            font-size: 2.25rem;
+        }
+    }
+    p {
+        color: $white-color;
+    }
+    .dm-hero-label {
+        span {
+            color: $white-color; 
+            font-weight: 500;
+            font-size: 14px;
+        }
+    }
+    .sh-hero-right {
+        img {
+            @include medium-screen {
+                max-width: 100%;
+            }
+        }
+    }
+}
+.dm-hero-domain-form {
+    max-width: 510px;
+    input[type="text"] {
+        padding: 18px 24px; 
+        background-color: $white-color; 
+        border: 0; 
+        width: 100%;
+        border-radius: 30px 0 0 30px;
+        &::placeholder {
+            color: #D6D6D6;
+        }
+    }
+    select {
+        width: 67px;
+        padding: 18px 3px;
+        flex-shrink: 0;
+        border-radius: 0;
+        border: 0;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    input[type="submit"] {
+        padding: 18px 20px;
+        border-radius: 0 30px 30px 0;
+        font-size: 16px;
+    }
+}
+
+/************ popular domain start *********/
+.dm-pp-domain-item {
+    padding: 25px 20px;
+    background: $white-color;
+    border-radius: 6px;
+    box-shadow: 0px 15px 60px rgba(151, 151, 151, 0.1);
+    transition: $transition;
+    &::before {
+        content: ''; 
+        position: absolute; 
+        right: 0; 
+        top: 0; 
+        width: 100%; 
+        height: 100%;
+        background: $primary-gradient;
+        z-index: -1;
+        transition: $transition;
+        opacity: 0;
+    }
+    img.original {
+        display: block; 
+    }
+    img.on-hover {
+        display: none;
+    }
+    .dm-offer-badge {
+        background: linear-gradient(287.85deg, #FF0766 0%, #FF7E5D 95.32%);
+        padding: 4px 10px;
+        font-size: 12px; 
+        right: -20px; 
+        top: 40px;
+        transform: rotate(-90deg);
+    }
+    h6 {
+        transition: $transition;
+    }
+    .subtitle {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 15px;
+        transition: $transition;
+    }
+    a {
+        font-family: $heading-font; 
+        font-weight: 600; 
+        color: $heading-color; 
+        display: flex; 
+        align-items: center;
+        transition: $transition; 
+        i {
+            margin-left: 6px;
+        }
+    }
+    .circle-small {
+        width: 14px; 
+        height: 14px; 
+        background: #2B65F5; 
+        border-radius: 50%;
+        right: 60px;
+        bottom: 60px;
+        transform: scale(0);
+        transition: $transition;
+        z-index: -1;
+    }
+    .circle-shape {
+        width: 150px; 
+        height: 150px; 
+        background: #276FF6; 
+        position: absolute; 
+        right: -75px; 
+        bottom: -75px;
+        border-radius: 50%;
+        opacity: 0.05;
+        z-index: -1;
+        transition: $transition;
+        &.shape-2 {
+            right: 20px;
+            bottom: -100px;
+        }
+    }
+    &:hover {
+        box-shadow: 0px 15px 60px rgba(5, 137, 255, 0.4);
+        &::before {
+            opacity: 1;
+        }
+        .original {
+            display: none; 
+        }
+        .on-hover {
+            display: block;
+        }
+        h6, .subtitle, a  {
+            color: $white-color; 
+        }
+        .circle-small {
+            transform: scale(1);
+        }
+        .circle-shape {
+            background: $white-color;
+            opacity: 0.1;
+        }
+    }
+}
+
+/************ Support Area ***********/ 
+.dm-support {
+    padding-top: 50px; 
+    @include large-screen {
+        padding-top: 0;
+    }
+}
+.dm-support-left {
+    padding: 80px 0;
+}
+.dm-support-info {
+    a {
+        color: $white-color; 
+        font-size: 20px;
+        font-weight: 700;
+        display: inline-block;
+        i {
+            margin-right: 10px;
+            background: $primary-gradient; 
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    }
+}
+
+/****************** Feedback Area start ***********/ 
+.dm-feedback {
+    background: linear-gradient(95.45deg, rgba(0, 130, 248, 0.05) 0.64%, rgba(28, 64, 242, 0.05) 98.23%);
+}
+.dm-feedback-right-rating {
+    span {
+        font-size: 13px; 
+        font-weight: 500;
+    }
+}
+.dm-feedback-single {
+    padding: 40px 25px;
+    border-radius: 1px;
+    transition: $transition;
+    .dm-feedback-comment {
+        p {
+            i {
+                color: rgba(189, 189, 189, 0.5);
+                font-size: 30px;
+                margin-right: 8px;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 1px 15px 60px rgba(151, 151, 151, 0.1);
+    }
+}
+
+
+/*********** Faq Section Start ********/ 
+.dm-faq-section {
+    .faq-feature-img {
+        position: absolute;
+        right: 0; 
+        bottom: 120px;
+        z-index: -1;
+        @include medium-screen {
+            position: initial;
+            margin-top: 50px;
+            max-width: 100%;
+        }
+    }
+}
+.dm-accordion {
+    .accordion-item {
+        border: 0;
+        + .accordion-item {
+            margin-top: 20px;
+        }
+        .accordion-header {
+            a {
+                padding: 18px 35px 18px 25px;
+                display: block;
+                color: $heading-color; 
+                font-family: $heading-font; 
+                font-weight: 700;
+                position: relative; 
+                &::after {
+                    content: '\f107'; 
+                    font-family: 'FontAwesome';
+                    transition: $transition;
+                    position: absolute; 
+                    right: 25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:not(.collapsed) {
+                    &::after {
+                        transform: translateY(-50%) rotate(180deg);
+                    }
+                }
+            }
+        }
+        .accordion-body {
+            padding: 8px 25px 25px 25px;
+        }
+    }
+}

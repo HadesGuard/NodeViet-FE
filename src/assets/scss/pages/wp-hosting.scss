@@ -1,0 +1,266 @@
+.wp-hero {
+    .wp-hero-dot {
+        bottom: 50px; 
+        left: 50px;
+        z-index: -1;
+    }
+    .wp-hero-plus {
+        top: 150px;
+        left: 120px;
+        z-index: -1; 
+    }
+    .wp-hero-line {
+        width: 70px; 
+        height: 1px; 
+        background: #00D172;
+        transform: rotate(45deg);
+        left: 40px;
+        top: 50%;
+        z-index: -1; 
+    }
+    .wp-hero-dot-illustration {
+        width: 10px; 
+        height: 10px;
+        background: linear-gradient(90deg, #1C40F2 -0.5%, #03F8FB 97.45%);
+        border-radius: 50%;
+        bottom: 30px; 
+        left: 330px;
+        z-index: -1;
+    }
+    .template-btn {
+        padding: 16px 40px;
+    }
+    .wp-hero-right {
+        @include medium-screen {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+.wp-hero-list {
+    align-items: center;
+    ul {
+        + ul {
+            margin-left: 40px;
+        }
+        li {
+            color: $white-color;
+            i {
+                margin-right: 6px;
+            }
+            + li {
+                margin-top: 10px;
+            }
+        }
+    }
+    @include screen-480 {
+        flex-direction: column;
+        align-items: flex-start;
+        ul {
+            + ul {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+/************ about section **********/ 
+.wp-about {
+    margin-top: -70px;
+}
+.wp-about-item {
+    padding: 40px 30px;
+    .item-bg {
+        right: 25px; 
+        top: 25px;
+        z-index: -1;
+    }
+    .icon-wrapper {
+        width: 56px; 
+        height: 56px;
+        box-shadow: 10px 15px 60px rgba(139, 139, 139, 0.3);
+    }
+}
+
+/*************** Pricing Section Start ********/ 
+.wp-pricing-column  {
+    padding: 40px 30px;
+    .pricing-badge {
+        font-size: 12px; 
+        color: $white-color; 
+        background: linear-gradient(287.85deg, #FF0766 0%, #FF7E5D 95.32%);
+        top: 40px;
+    }
+    .feature-list {
+        height: auto;
+    }
+    &.business-plan {
+        box-shadow: 0px 20px 80px rgba(0, 148, 255, 0.1);
+    }
+}
+.wp-pricing-meta-item {
+    .wp-icon-wrapper {
+        width: 40px; 
+        height: 40px; 
+        background: linear-gradient(95.45deg, rgba(0, 130, 248, 0.1) 0.64%, rgba(28, 64, 242, 0.1) 98.23%);
+        color: $primary-color;
+    }
+    p {
+        font-family: $heading-font;
+        font-weight: 600;
+    }
+    .tab-switch-btn {
+        .switch-input {
+            left: 50%; 
+            transform: translateX(-50%);
+            &:checked {
+                ~ .toggle-switch-btn {
+                    &::before {
+                        left: 28px;
+                    }
+                }
+            }
+        }
+        .toggle-switch-btn {
+            width: 50px; 
+            height: 24px;
+            &::before {
+                width: 14px; 
+                height: 14px;
+                left: 4px;
+            }
+        }
+    }
+}
+
+/************ Highlights Section Start ***********/ 
+.highlight-item {
+    .icon-wrapper {
+        width: 60px; 
+        height: 60px; 
+        background: rgba(108, 186, 255, 0.15);
+    }
+}
+.wp-about-company {
+    padding: 80px 30px;
+    .dot-shape {
+        right: 90px; 
+        top: 60px;
+        z-index: -1;
+    }
+    .circle-half {
+        right: 250px; 
+        bottom: 0;
+        z-index: -1;
+    }
+    h3 {
+        color: $white-color;
+    }
+}
+.wp_about_item {
+    display: inline-block;
+    .icon-wrapper {
+        width: 56px; 
+        height: 56px; 
+        background: #3146AC;
+        border-radius: 50%;
+        position: relative;
+        font-size: 20px;
+        &::before {
+            content: ''; 
+            position: absolute; 
+            width: 80px; 
+            height: 80px;
+            background: $white-color;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+    }
+    h4 {
+        color: $white-color;
+        width: 100px;
+        text-align: left;
+    }
+    span {
+        color: $white-color;
+        font-weight: 500;
+    }
+}
+
+/************ Feature Section Start **********/ 
+.wp-feature-item {
+    padding: 20px;
+    .icon-wrapper {
+        width: 60px; 
+        height: 60px;
+        background: rgba(0, 102, 255, 0.05);
+        border-radius: 50%;
+        font-size: 20px;
+        color: $primary-color;
+    }
+}
+
+/************* Signup Area Start *************/ 
+.wp-signup {
+    .wp-signup-left {
+        padding: 40px 0;
+    }
+    @include medium-screen {
+        padding-top: 30px;
+    }
+}
+
+/********** Feedback Section Start *********/ 
+.wp-feedback {
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+.wp-feedback-star {
+    padding: 0 15px 15px 15px;
+    border: 2px solid $heading-color;
+    border-top: 0;
+    .title-wrapper {
+        margin-top: -15px;
+        position: relative; 
+        .line {
+            position: absolute; 
+            width: 35px; 
+            height: 2px; 
+            background: $heading-color;
+            bottom: 15px;
+            &.left-line {
+                 left: -15px;
+            }
+            &.right-line {
+                right: -15px;
+            }
+        }
+    }
+    h6 {
+        display: inline-block;
+        position: relative; 
+        &::before {
+            content: ''; 
+            position: absolute; 
+            left: -15px; 
+            bottom: 5px; 
+            width: 6px; 
+            height: 6px; 
+            background: $heading-color; 
+            border-radius: 50%;
+        }
+        &::after {
+            content: ''; 
+            position: absolute; 
+            right: -15px; 
+            bottom: 5px; 
+            width: 6px; 
+            height: 6px; 
+            background: $heading-color; 
+            border-radius: 50%;
+        }
+    }
+}

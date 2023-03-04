@@ -1,0 +1,16 @@
+.not-found-404 {
+    min-height: 100vh;
+    padding: 60px 16px 60px;
+    .notfound-content {
+        max-width: 650px;
+        h1 {
+            font-size: 250px;
+            @include small-screen {
+                font-size: 190px;
+            }
+            @include portrait-phone {
+                font-size: 120px;
+            }
+        }
+    }
+}
